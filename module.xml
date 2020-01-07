@@ -456,6 +456,12 @@
         <Height_Max b="decimal" f="notnull">
           Height Max (m)
         </Height_Max>
+        <Width_Max   b="decimal" f="notnull">
+          Width Max (m)
+        </Width_Max>
+        <Length_Max   b="decimal" f="notnull">
+          Length Max (m)
+        </Length_Max>
         <Diameter_Max   b="decimal" f="notnull">
           Diameter Max (m)
           <desc>
@@ -467,6 +473,12 @@
         <Height_Min b="decimal">
           Height Min (m)
         </Height_Min>
+        <Width_Min   b="decimal">
+          Width Min (m)
+        </Width_Min>
+        <Length_Min   b="decimal">
+          Length Min (m)
+        </Length_Min>
         <Diameter_Min   b="decimal">
           Diameter Min (m)
           <desc>
@@ -475,6 +487,9 @@
         </Diameter_Min>
       </col>
     </cols>
+    <Additional_Dimention   b="decimal">
+      Additional Dimention (m)
+    </Additional_Dimention>
     <Other_Dimension/>
     <Shape_Notes/>
   </Dimensions>
@@ -485,46 +500,19 @@
       </desc>
       <opts>
         <opt>
-          Stone wall (krepis)
-          <desc>
-            Stone wall (krepis) is found either at the foot of the mound, or inside it (upon excavation).
-          </desc>
+          Other architectuaral element
         </opt>
         <opt>
-          Enclosure
-          <desc>
-            Enclosure is a fence or a circle of variable material either around or some distance outside of the mound.
-          </desc>
-        </opt>
-        <opt>
-          Standing features in vicinity
-          <desc>
-            Standing features in the vicinity comprise other standing stone or architectural features associated with the mound.
-          </desc>
+          Other feature
         </opt>
         <opt>
           Artefact scatter
-          <desc>
-            Artefact scatter indicates a discreet and bounded concentration of manmade objects on the surface.
-          </desc>
-        </opt>
-        <opt>
-          Loose artefacts
-          <desc>
-            Loose artefacts indicates one or two artefacts dispersed on or around mound.
-          </desc>
         </opt>
         <opt>
           Bones
-          <desc>
-            Bones denote bioarchaeological remains, human or animal.
-          </desc>
         </opt>
         <opt>
           Other
-          <desc>
-            Other - please use the annotation to describe.
-          </desc>
         </opt>
       </opts>
     </Associated_Feature_or_Material>
