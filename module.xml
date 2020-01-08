@@ -500,16 +500,37 @@
       </desc>
       <opts>
         <opt>
-          Other architectuaral element
+          Bricks
         </opt>
         <opt>
-          Other feature
+          Glass
+        </opt>
+        <opt>
+          Lithics
+        </opt>
+        <opt>
+          Metal
+        </opt>
+        <opt>
+          Pottery
+        </opt>
+        <opt>
+          Tile
+        </opt>
+        <opt>
+          Inscription
         </opt>
         <opt>
           Artefact scatter
         </opt>
         <opt>
           Bones
+        </opt>
+        <opt>
+          Other architectuaral element
+        </opt>
+        <opt>
+          Other feature
         </opt>
         <opt>
           Other
