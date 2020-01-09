@@ -28,6 +28,7 @@
             <Main>
               <Create_new_Record/>
               <Next_Mound_ID/>
+              <Next_GPS_Location_ID/>
               <GPS_Diagnostics/>
             </Main>
             <Search>
@@ -162,12 +163,16 @@
                 <Col_1>
                   <Burial_Mound_ID/>
                 </Col_1>
+                <Col_2>
+                  <GPS_Location_ID/>
+                </Col_2>
               </Colgroup_1>
             </GPS_Location_Information>
           </GPS_Location>
         </faims>
       </instance>
       <bind nodeset="/faims/Start/Main/Next_Mound_ID" type="decimal"/>
+      <bind nodeset="/faims/Start/Main/Next_GPS_Location_ID" type="decimal"/>
       <bind nodeset="/faims/Burial_Mound/General/Handheld_GPS_point" type="decimal"/>
       <bind nodeset="/faims/Burial_Mound/General/Elevation" type="decimal"/>
       <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_1/Height_Max" type="decimal"/>
@@ -230,6 +235,9 @@
         </trigger>
         <input ref="Next_Mound_ID" faims_style_class="required">
           <label>{Next_Mound_ID}</label>
+        </input>
+        <input ref="Next_GPS_Location_ID" faims_style_class="required">
+          <label>{Next_GPS_Location_ID}</label>
         </input>
         <input faims_read_only="true" ref="GPS_Diagnostics">
           <label>{GPS_Diagnostics}</label>
@@ -619,6 +627,12 @@
             <label/>
             <input faims_attribute_name="Burial Mound ID" faims_attribute_type="measure" ref="Burial_Mound_ID" faims_read_only="true">
               <label>{Burial_Mound_ID}</label>
+            </input>
+          </group>
+          <group ref="Col_2" faims_style="even">
+            <label/>
+            <input faims_attribute_name="GPS Location ID" faims_attribute_type="measure" ref="GPS_Location_ID" faims_style_class="required">
+              <label>{GPS_Location_ID}</label>
             </input>
           </group>
         </group>

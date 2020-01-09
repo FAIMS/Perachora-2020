@@ -709,6 +709,12 @@
           <fmt>GPS-$2-</fmt>
         </str>
       </Burial_Mound_ID>
+      <GPS_Location_ID f="id notnull autonum">
+        <str>
+          <pos>2</pos>
+          <fmt>$2-</fmt>
+        </str>
+      </GPS_Location_ID>
     </cols>
   </GPS_Location_Information>
 </GPS_Location>

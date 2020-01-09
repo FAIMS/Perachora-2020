@@ -318,6 +318,7 @@ REF_TO_TYPE.put("User/User/User", "dropdown");
 REF_TO_TYPE.put("User/User/Log_in", "button");
 REF_TO_TYPE.put("Start/Main/Create_new_Record", "button");
 REF_TO_TYPE.put("Start/Main/Next_Mound_ID", "input");
+REF_TO_TYPE.put("Start/Main/Next_GPS_Location_ID", "input");
 REF_TO_TYPE.put("Start/Main/GPS_Diagnostics", "gpsdiag");
 REF_TO_TYPE.put("Start/Search/Search_Term", "input");
 REF_TO_TYPE.put("Start/Search/Search_Button", "button");
@@ -384,6 +385,7 @@ REF_TO_TYPE.put("Burial_Mound/CRM/CRM_Photos_Button_1", "button");
 REF_TO_TYPE.put("Shape/Shape_Note/Label", "input");
 REF_TO_TYPE.put("Shape/Shape_Note/Note", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Burial_Mound_ID", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "input");
 REF_TO_TYPE.put("User/User", "tab");
 REF_TO_TYPE.put("Start/Main", "tab");
 REF_TO_TYPE.put("Start/Search", "tab");
@@ -445,6 +447,7 @@ DATA_REFS.add("Burial_Mound/CRM/CRM_Photos");
 DATA_REFS.add("Shape/Shape_Note/Label");
 DATA_REFS.add("Shape/Shape_Note/Note");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Burial_Mound_ID");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_ID");
 
 
 
@@ -586,6 +589,7 @@ HashSet getTabsAsHashSet() {
 List getStartingIdRefs() {
   List l = new ArrayList();
   l.add("Start/Main/Next_Mound_ID");
+  l.add("Start/Main/Next_GPS_Location_ID");
   return l;
 }
 
@@ -3228,6 +3232,7 @@ String validateFields(List fields, String format) {
 void validateStart() {
   List f = new ArrayList(); // Fields to be validated
   f.add(fieldPair("Start/Main/Next_Mound_ID", "{Next_Mound_ID}"));
+  f.add(fieldPair("Start/Main/Next_GPS_Location_ID", "{Next_GPS_Location_ID}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
@@ -3256,6 +3261,13 @@ void validateBurialMound() {
   f.add(fieldPair("Burial_Mound/CRM/Archaeological_potential", "{Archaeological_potential}"));
   f.add(fieldPair("Burial_Mound/CRM/Most_recent_damage_what", "{Most_recent_damage__what_}"));
   f.add(fieldPair("Burial_Mound/CRM/Most_recent_damage_within", "{Most_recent_damage__within_}"));
+
+  String validationMessage = validateFields(f, "PLAINTEXT");
+  showWarning("{validation_results}", validationMessage);
+}
+void validateGPSLocation() {
+  List f = new ArrayList(); // Fields to be validated
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/GPS_Location_ID", "{GPS_Location_ID}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
@@ -3480,6 +3492,7 @@ void addNavigationButtons(String tabgroup) {
   removeNavigationButtons();
   List tabgroupsToValidate = new ArrayList();
   tabgroupsToValidate.add("Start");
+  tabgroupsToValidate.add("GPS_Location");
   tabgroupsToValidate.add("Burial_Mound");
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
@@ -3836,13 +3849,16 @@ void newGPSLocation(String parent){
     parentTabgroup   = parent;
     parentTabgroup__ = parent;
   }
-  
+  if (isNull("Start/Main/Next_GPS_Location_ID")) {
+    showWarning("{Alert}", "{A_next_ID_has_not_been_entered_please_provide_one}");
+    return;
+  }
 
   setUuid(tabgroup, null);
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
-  
+  incAutoNum("GPS_Location/GPS_Location_Information/GPS_Location_ID");
 
   executeOnEvent(tabgroup, "create");
 }
@@ -3953,7 +3969,7 @@ void duplicateGPSLocation(){
   String uuidOld = getUuid(tabgroup);
   setUuid(tabgroup, "");
   disableAutoSave(tabgroup);
-  
+  incAutoNum("GPS_Location/GPS_Location_Information/GPS_Location_ID");
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
@@ -4252,6 +4268,7 @@ void loadEntityFromScannedQrCode() {
 /******************************************************************************/
 Map AUTONUM_DEST_TO_SOURCE = new HashMap();
 AUTONUM_DEST_TO_SOURCE.put("Burial_Mound/General/Mound_ID", "Start/Main/Next_Mound_ID");
+AUTONUM_DEST_TO_SOURCE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "Start/Main/Next_GPS_Location_ID");
 
 /*
  * If value of field specified by `ref` is null, sets the field to `defaultVal`,

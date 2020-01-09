@@ -107,4 +107,11 @@
       </validator>
     </property>
   </ArchaeologicalElement>
+  <ArchaeologicalElement name="GPS Location">
+    <property name="GPS Location ID">
+      <validator type="blankchecker">
+        <param type="field" value="measure"/>
+      </validator>
+    </property>
+  </ArchaeologicalElement>
 </ValidationSchema>

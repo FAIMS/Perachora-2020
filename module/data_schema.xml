@@ -773,5 +773,10 @@
       <formatString>GPS-$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
+    <property name="GPS Location ID" type="measure" isIdentifier="true">
+      <description></description>
+      <formatString>$2-</formatString>
+      <appendCharacterString> - </appendCharacterString>
+    </property>
   </ArchaeologicalElement>
 </dataSchema>
