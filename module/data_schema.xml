@@ -768,14 +768,14 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="GPS Location">
     <description></description>
-    <property name="Burial Mound ID" type="measure" isIdentifier="true">
+    <property name="GPS Location Mound ID" type="measure" isIdentifier="true">
       <description></description>
-      <formatString>GPS-$2-</formatString>
+      <formatString>Mound_ID-$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="GPS Location ID" type="measure" isIdentifier="true">
       <description></description>
-      <formatString>$2-</formatString>
+      <formatString>GPS-$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="Latitude" type="measure">

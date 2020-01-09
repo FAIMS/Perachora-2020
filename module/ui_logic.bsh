@@ -384,7 +384,7 @@ REF_TO_TYPE.put("Burial_Mound/CRM/CRM_Photos", "camera");
 REF_TO_TYPE.put("Burial_Mound/CRM/CRM_Photos_Button_1", "button");
 REF_TO_TYPE.put("Shape/Shape_Note/Label", "input");
 REF_TO_TYPE.put("Shape/Shape_Note/Note", "input");
-REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Burial_Mound_ID", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Latitude", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Longitude", "input");
@@ -452,7 +452,7 @@ DATA_REFS.add("Burial_Mound/CRM/Comments_and_Recommendations");
 DATA_REFS.add("Burial_Mound/CRM/CRM_Photos");
 DATA_REFS.add("Shape/Shape_Note/Label");
 DATA_REFS.add("Shape/Shape_Note/Note");
-DATA_REFS.add("GPS_Location/GPS_Location_Information/Burial_Mound_ID");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_ID");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Latitude");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Longitude");
@@ -2510,7 +2510,7 @@ void inheritFieldValue(String src, String dst) {
   inheritFieldValue(src, dst, true);
 }
 
-
+inheritFieldValue("Burial_Mound/General/Mound_ID", "GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID", true);
 
 /******************************************************************************/
 /*                            NEW TAB REDIRECTION                             */

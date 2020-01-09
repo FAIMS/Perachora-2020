@@ -161,7 +161,7 @@
             <GPS_Location_Information>
               <Colgroup_1>
                 <Col_1>
-                  <Burial_Mound_ID/>
+                  <GPS_Location_Mound_ID/>
                 </Col_1>
                 <Col_2>
                   <GPS_Location_ID/>
@@ -645,8 +645,8 @@
           <label/>
           <group ref="Col_1" faims_style="even">
             <label/>
-            <input faims_attribute_name="Burial Mound ID" faims_attribute_type="measure" ref="Burial_Mound_ID" faims_read_only="true">
-              <label>{Burial_Mound_ID}</label>
+            <input faims_attribute_name="GPS Location Mound ID" faims_attribute_type="measure" ref="GPS_Location_Mound_ID" faims_read_only="true">
+              <label>{GPS_Location_Mound_ID}</label>
             </input>
           </group>
           <group ref="Col_2" faims_style="even">

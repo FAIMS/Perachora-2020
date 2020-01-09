@@ -701,18 +701,19 @@
 </Shape>
 
 <GPS_Location>
+  <fmt>GPS-{{GPS_Location_Mound_ID $2}}-{{GPS_Location_ID $2}}</fmt>
   <GPS_Location_Information>
     <cols>
-      <Burial_Mound_ID f="id readonly">
+      <GPS_Location_Mound_ID f="id readonly" i="Burial_Mound/General/Mound_ID">
         <str>
           <pos>1</pos>
-          <fmt>GPS-$0-</fmt>
+          <fmt>Mound_ID-$2-</fmt>
         </str>
-      </Burial_Mound_ID>
+      </GPS_Location_Mound_ID>
       <GPS_Location_ID f="id notnull autonum">
         <str>
           <pos>2</pos>
-          <fmt>$2-</fmt>
+          <fmt>GPS-$2</fmt>
         </str>
       </GPS_Location_ID>
     </cols>
