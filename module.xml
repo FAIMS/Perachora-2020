@@ -700,10 +700,15 @@
   </Shape_Note>
 </Shape>
 
-<GPS_Location f="nodata">
+<GPS_Location>
   <GPS_Location_Information>
     <cols>
-
+      <Burial_Mound_ID f="id readonly">
+        <str>
+          <pos>1</pos>
+          <fmt>GPS-$2-</fmt>
+        </str>
+      </Burial_Mound_ID>
     </cols>
   </GPS_Location_Information>
 </GPS_Location>
