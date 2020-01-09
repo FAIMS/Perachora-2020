@@ -450,6 +450,12 @@
       ]]></desc>
     </Photo>
   </General>
+
+  <Additional_GPS>
+    <New_GPS_Location lc="GPS_Location" t="button"/>
+    <GPS_Location_List ec="GPS_Location" t="dropdown"/>
+  </Additional_GPS>
+
   <Dimensions>
     <cols>
       <col>
@@ -693,6 +699,15 @@
     <Note/>
   </Shape_Note>
 </Shape>
+
+<GPS_Location f="nodata">
+  <GPS_Location_Information>
+    <cols>
+
+    </cols>
+  </GPS_Location_Information>
+</GPS_Location>
+
 
 <logic><![CDATA[
   /************************************ MAP *************************************/

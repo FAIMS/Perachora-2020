@@ -106,6 +106,10 @@
               <Photo/>
               <Photo_Button_1/>
             </General>
+            <Additional_GPS>
+              <New_GPS_Location/>
+              <GPS_Location_List/>
+            </Additional_GPS>
             <Dimensions>
               <Colgroup_1>
                 <Col_1>
@@ -152,6 +156,11 @@
               <Note/>
             </Shape_Note>
           </Shape>
+          <GPS_Location>
+            <GPS_Location_Information>
+              <Colgroup_1/>
+            </GPS_Location_Information>
+          </GPS_Location>
         </faims>
       </instance>
       <bind nodeset="/faims/Start/Main/Next_Mound_ID" type="decimal"/>
@@ -435,6 +444,19 @@
           <label>{Photo}</label>
         </trigger>
       </group>
+      <group ref="Additional_GPS">
+        <label>{Additional_GPS}</label>
+        <trigger ref="New_GPS_Location">
+          <label>{New_GPS_Location}</label>
+        </trigger>
+        <select1 ref="GPS_Location_List">
+          <label>{GPS_Location_List}</label>
+          <item>
+            <label>Options not loaded</label>
+            <value>Options not loaded</value>
+          </item>
+        </select1>
+      </group>
       <group ref="Dimensions">
         <label>{Dimensions}</label>
         <group ref="Colgroup_1" faims_style="orientation">
@@ -581,6 +603,15 @@
         <input faims_attribute_name="Note" faims_attribute_type="measure" ref="Note">
           <label>{Note}</label>
         </input>
+      </group>
+    </group>
+    <group ref="GPS_Location">
+      <label>{GPS_Location}</label>
+      <group ref="GPS_Location_Information">
+        <label>{GPS_Location_Information}</label>
+        <group ref="Colgroup_1" faims_style="orientation">
+          <label/>
+        </group>
       </group>
     </group>
   </h:body>

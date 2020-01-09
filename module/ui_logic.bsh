@@ -313,6 +313,7 @@ List    NOAUTOSAVE_TAB_GROUPS             = new ArrayList();
 HashSet NOAUTOSAVE_TAB_GROUPS_AS_HASH_SET = null;
 NODATA_TAB_GROUPS.add("User");
 NODATA_TAB_GROUPS.add("Start");
+NODATA_TAB_GROUPS.add("GPS_Location");
 
 REF_TO_TYPE.put("User/User/User", "dropdown");
 REF_TO_TYPE.put("User/User/Log_in", "button");
@@ -352,6 +353,8 @@ REF_TO_TYPE.put("Burial_Mound/General/Facing_Direction_For_Photo", "dropdown");
 REF_TO_TYPE.put("Burial_Mound/General/Notes_and_Photo_ID", "input");
 REF_TO_TYPE.put("Burial_Mound/General/Photo", "camera");
 REF_TO_TYPE.put("Burial_Mound/General/Photo_Button_1", "button");
+REF_TO_TYPE.put("Burial_Mound/Additional_GPS/New_GPS_Location", "button");
+REF_TO_TYPE.put("Burial_Mound/Additional_GPS/GPS_Location_List", "dropdown");
 REF_TO_TYPE.put("Burial_Mound/Dimensions/Height_Max", "input");
 REF_TO_TYPE.put("Burial_Mound/Dimensions/Width_Max", "input");
 REF_TO_TYPE.put("Burial_Mound/Dimensions/Length_Max", "input");
@@ -387,10 +390,12 @@ REF_TO_TYPE.put("Start/Search", "tab");
 REF_TO_TYPE.put("Start/Table", "tab");
 REF_TO_TYPE.put("Start/Map", "tab");
 REF_TO_TYPE.put("Burial_Mound/General", "tab");
+REF_TO_TYPE.put("Burial_Mound/Additional_GPS", "tab");
 REF_TO_TYPE.put("Burial_Mound/Dimensions", "tab");
 REF_TO_TYPE.put("Burial_Mound/Material", "tab");
 REF_TO_TYPE.put("Burial_Mound/CRM", "tab");
 REF_TO_TYPE.put("Shape/Shape_Note", "tab");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information", "tab");
 
 DATA_REFS.add("Burial_Mound/General/Mound_ID");
 DATA_REFS.add("Burial_Mound/General/Date");
@@ -452,6 +457,7 @@ TAB_GROUPS_AS_LIST.add("User");
 TAB_GROUPS_AS_LIST.add("Start");
 TAB_GROUPS_AS_LIST.add("Burial_Mound");
 TAB_GROUPS_AS_LIST.add("Shape");
+TAB_GROUPS_AS_LIST.add("GPS_Location");
 
 TABS_AS_LIST.add("User/User");
 TABS_AS_LIST.add("Start/Main");
@@ -459,10 +465,12 @@ TABS_AS_LIST.add("Start/Search");
 TABS_AS_LIST.add("Start/Table");
 TABS_AS_LIST.add("Start/Map");
 TABS_AS_LIST.add("Burial_Mound/General");
+TABS_AS_LIST.add("Burial_Mound/Additional_GPS");
 TABS_AS_LIST.add("Burial_Mound/Dimensions");
 TABS_AS_LIST.add("Burial_Mound/Material");
 TABS_AS_LIST.add("Burial_Mound/CRM");
 TABS_AS_LIST.add("Shape/Shape_Note");
+TABS_AS_LIST.add("GPS_Location/GPS_Location_Information");
 
 
 
@@ -3921,6 +3929,7 @@ addOnEvent("User", "show", "removeNavigationButtons()");
 addOnEvent("Start", "show", "removeNavigationButtons()");
 addOnEvent("Burial_Mound", "show", "removeNavigationButtons()");
 addOnEvent("Shape", "show", "removeNavigationButtons()");
+addOnEvent("GPS_Location", "show", "removeNavigationButtons()");
 addOnEvent("Burial_Mound", "show", "addNavigationButtons(\"Burial_Mound\")");
 addOnEvent("Shape", "show", "addNavigationButtons(\"Shape\")");
 
@@ -4344,7 +4353,12 @@ String getEntityMenuPopulationFunction(String[] menuDescriptor) {
 }
 
 ENTITY_MENUS = new ArrayList();
-
+ENTITY_MENUS.add(new String[] {
+    "Burial_Mound/Additional_GPS/GPS_Location_List",
+    "getUuid(\"Burial_Mound\")",
+    "GPS Location",
+    "Burial Mound - GPS Location"
+});
 for (m : ENTITY_MENUS) {
   String functionCall = getEntityMenuPopulationFunction(m);
   execute(functionCall);
@@ -4360,7 +4374,7 @@ for (m : ENTITY_MENUS) {
   addOnEvent(ref, evt, cmd);
 }
 
-
+addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity(true)");
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
@@ -4731,8 +4745,8 @@ setSyncEnabled (false);
   }
 
   addOnEvent("module", "load", "loadSpatialLayers()");
-
-
+ 
+ /*********************** Multiple GPS Positions Polygon Work ***********************/
   String easting1 = "";
   String northing1 = "";
   String easting2 = "";
