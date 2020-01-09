@@ -1061,8 +1061,8 @@ setSyncEnabled (false);
   }
 
   addOnEvent("module", "load", "loadSpatialLayers()");
-
-
+ 
+ /*********************** Multiple GPS Positions Polygon Work ***********************/
   String easting1 = "";
   String northing1 = "";
   String easting2 = "";
