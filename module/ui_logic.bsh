@@ -386,6 +386,12 @@ REF_TO_TYPE.put("Shape/Shape_Note/Label", "input");
 REF_TO_TYPE.put("Shape/Shape_Note/Note", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Burial_Mound_ID", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Latitude", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Longitude", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Northing", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Easting", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Accuracy", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Take_From_GPS_1", "button");
 REF_TO_TYPE.put("User/User", "tab");
 REF_TO_TYPE.put("Start/Main", "tab");
 REF_TO_TYPE.put("Start/Search", "tab");
@@ -448,6 +454,11 @@ DATA_REFS.add("Shape/Shape_Note/Label");
 DATA_REFS.add("Shape/Shape_Note/Note");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Burial_Mound_ID");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_ID");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/Latitude");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/Longitude");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/Northing");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/Easting");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/Accuracy");
 
 
 
@@ -3268,6 +3279,11 @@ void validateBurialMound() {
 void validateGPSLocation() {
   List f = new ArrayList(); // Fields to be validated
   f.add(fieldPair("GPS_Location/GPS_Location_Information/GPS_Location_ID", "{GPS_Location_ID}"));
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/Latitude", "{Latitude}"));
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/Longitude", "{Longitude}"));
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/Northing", "{Northing}"));
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/Easting", "{Easting}"));
+  f.add(fieldPair("GPS_Location/GPS_Location_Information/Accuracy", "{Accuracy}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
@@ -4126,10 +4142,12 @@ void loadGPSLocationFrom(String uuid) {
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
 addOnEvent("Burial_Mound/General/Take_From_GPS_1", "click", "takePoint(\"Burial_Mound\")");
+addOnEvent("GPS_Location/GPS_Location_Information/Take_From_GPS_1", "click", "takePoint(\"GPS_Location\")");
 
 Map getTakeFromGpsMappings() {
   Map tabgroupToTabRef = new HashMap();
   tabgroupToTabRef.put("Burial_Mound", "Burial_Mound/General");
+  tabgroupToTabRef.put("GPS_Location", "GPS_Location/GPS_Location_Information");
   return tabgroupToTabRef;
 }
 
@@ -4857,41 +4875,7 @@ setSyncEnabled (false);
   }
 
   addOnEvent("module", "load", "loadSpatialLayers()");
- 
- /*********************** Multiple GPS Positions Polygon Work ***********************/
-  String easting1 = "";
-  String northing1 = "";
-  String easting2 = "";
-  String northing2 = "";
-  addOnEvent("Square/General/Start_Line", "click", "buttonPress1()");
-  void buttonPress1(){
-    Object projPosition = getGPSPositionProjected();
-    Double northing = projPosition.getLatitude();
-    Double easting = projPosition.getLongitude();
-    
-    String sNorthing1    = "" + northing;
-    String sEasting1     = "" + easting;
-    easting1 = sEasting1;
-    northing1 = sNorthing1;
-    
-    Map tabgroupToTabRef = getTakeFromGpsMappings();
-    setFieldValue("Square/General/Easting1",   sEasting1);
-    setFieldValue("Square/General/Northing1",  sNorthing1);
-  }
-  addOnEvent("Square/General/Stop_Line", "click", "buttonPress2()");
-  void buttonPress2(){
-    Object projPosition = getGPSPositionProjected();
-    Double northing = projPosition.getLatitude();
-    Double easting = projPosition.getLongitude();
-    
-    String sNorthing2    = "" + northing;
-    String sEasting2     = "" + easting;
-    easting2 = sEasting2;
-    northing2 = sNorthing2;
-    
-    setFieldValue("Square/General/Easting2",   sEasting2);
-    setFieldValue("Square/General/Northing2",  sNorthing2);
-  }
+
 
 
 
