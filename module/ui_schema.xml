@@ -126,7 +126,7 @@
                   <Diameter_Min/>
                 </Col_2>
               </Colgroup_1>
-              <Additional_Dimention/>
+              <Additional_Dimension/>
               <Other_Dimension/>
               <Shape_Notes/>
             </Dimensions>
@@ -203,7 +203,7 @@
       <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Width_Min" type="decimal"/>
       <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Length_Min" type="decimal"/>
       <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Diameter_Min" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Additional_Dimention" type="decimal"/>
+      <bind nodeset="/faims/Burial_Mound/Dimensions/Additional_Dimension" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -524,8 +524,8 @@
             </input>
           </group>
         </group>
-        <input faims_attribute_name="Additional Dimention" faims_attribute_type="measure" ref="Additional_Dimention">
-          <label>{Additional_Dimention__m_}</label>
+        <input faims_attribute_name="Additional Dimension" faims_attribute_type="measure" ref="Additional_Dimension">
+          <label>{Additional_Dimension__m_}</label>
         </input>
         <input faims_attribute_name="Other Dimension" faims_attribute_type="measure" ref="Other_Dimension">
           <label>{Other_Dimension}</label>

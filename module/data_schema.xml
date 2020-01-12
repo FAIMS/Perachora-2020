@@ -520,7 +520,7 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Additional Dimention" type="measure">
+    <property name="Additional Dimension" type="measure">
       <description></description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -547,7 +547,7 @@
         <term>{Glass}
 <description> </description></term>
         <term>{Lithics}
-<description> </description></term>
+<description></description></term>
         <term>{Metal}
 <description> </description></term>
         <term>{Pottery}
@@ -603,6 +603,8 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
+        <term>{N/A}
+<description> </description></term>
         <term>{0___No_observation}
 <description> </description></term>
         <term>{1___pristine}
@@ -770,7 +772,7 @@
     <description></description>
     <property name="GPS Location Mound ID" type="measure" isIdentifier="true">
       <description></description>
-      <formatString>Mound_ID-$2-</formatString>
+      <formatString>$2-</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="GPS Location ID" type="measure" isIdentifier="true">
