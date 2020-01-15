@@ -1,5 +1,5 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: d0634cb0d5faf3ee4139b0e307faf507cdd6e447
+ * GENERATED WITH FAIMS-TOOLS, SHA1: 2a1f0f3a3e1f9ce5bcbe4eb5cd952554b865b911
  */
 import android.util.Log;
 import android.os.Build.MODEL;
@@ -317,7 +317,7 @@ NODATA_TAB_GROUPS.add("Start");
 REF_TO_TYPE.put("User/User/User", "dropdown");
 REF_TO_TYPE.put("User/User/Log_in", "button");
 REF_TO_TYPE.put("Start/Main/Create_new_Record", "button");
-REF_TO_TYPE.put("Start/Main/Next_Mound_ID", "input");
+REF_TO_TYPE.put("Start/Main/Next_Feature_ID", "input");
 REF_TO_TYPE.put("Start/Main/Next_GPS_Location_ID", "input");
 REF_TO_TYPE.put("Start/Main/GPS_Diagnostics", "gpsdiag");
 REF_TO_TYPE.put("Start/Search/Search_Term", "input");
@@ -330,61 +330,61 @@ REF_TO_TYPE.put("Start/Map/Map", "map");
 REF_TO_TYPE.put("Start/Map/Center_Me_1", "button");
 REF_TO_TYPE.put("Start/Map/Save_Map_Settings_1", "button");
 REF_TO_TYPE.put("Start/Map/Create_Shape", "button");
-REF_TO_TYPE.put("Burial_Mound/General/Validate", "button");
-REF_TO_TYPE.put("Burial_Mound/General/Mound_ID", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Date", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Burial_Mound_author", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Type", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/General/Source", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/General/Description_of_Mound_or_Locale", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Landuse_around_Mound", "picture");
-REF_TO_TYPE.put("Burial_Mound/General/Landuse_on_top_of_Mound", "picture");
-REF_TO_TYPE.put("Burial_Mound/General/Position_in_the_landscape", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/General/Mound_prominence", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/General/Latitude", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Longitude", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Northing", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Easting", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Accuracy", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Take_From_GPS_1", "button");
-REF_TO_TYPE.put("Burial_Mound/General/Handheld_GPS_point", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Elevation", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Facing_Direction_For_Photo", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/General/Notes_and_Photo_ID", "input");
-REF_TO_TYPE.put("Burial_Mound/General/Photo", "camera");
-REF_TO_TYPE.put("Burial_Mound/General/Photo_Button_1", "button");
-REF_TO_TYPE.put("Burial_Mound/Additional_GPS/New_GPS_Location", "button");
-REF_TO_TYPE.put("Burial_Mound/Additional_GPS/GPS_Location_List", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Height_Max", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Width_Max", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Length_Max", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Diameter_Max", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Height_Min", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Width_Min", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Length_Min", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Diameter_Min", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Additional_Dimension", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Other_Dimension", "input");
-REF_TO_TYPE.put("Burial_Mound/Dimensions/Shape_Notes", "input");
-REF_TO_TYPE.put("Burial_Mound/Material/Associated_Feature_or_Material", "checkbox");
-REF_TO_TYPE.put("Burial_Mound/Material/Surface_Material_Description", "input");
-REF_TO_TYPE.put("Burial_Mound/Material/Sample_Collected", "radio");
-REF_TO_TYPE.put("Burial_Mound/Material/Chronology_Estimate", "input");
-REF_TO_TYPE.put("Burial_Mound/Material/Associated_Feature_or_Material_Photo", "camera");
-REF_TO_TYPE.put("Burial_Mound/Material/Associated_Feature_or_Material_Photo_Button_1", "button");
-REF_TO_TYPE.put("Burial_Mound/CRM/Condition", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/CRM/Principal_Source_of_Impact", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/CRM/Other_Sources_of_Impact", "input");
-REF_TO_TYPE.put("Burial_Mound/CRM/Archaeological_potential", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/CRM/Most_recent_damage_what", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/CRM/Most_recent_damage_within", "dropdown");
-REF_TO_TYPE.put("Burial_Mound/CRM/RT_Description", "input");
-REF_TO_TYPE.put("Burial_Mound/CRM/Comments_and_Recommendations", "input");
-REF_TO_TYPE.put("Burial_Mound/CRM/CRM_Photos", "camera");
-REF_TO_TYPE.put("Burial_Mound/CRM/CRM_Photos_Button_1", "button");
+REF_TO_TYPE.put("Feature/General/Validate", "button");
+REF_TO_TYPE.put("Feature/General/Feature_ID", "input");
+REF_TO_TYPE.put("Feature/General/Date", "input");
+REF_TO_TYPE.put("Feature/General/Feature_author", "input");
+REF_TO_TYPE.put("Feature/General/Type", "dropdown");
+REF_TO_TYPE.put("Feature/General/Source", "dropdown");
+REF_TO_TYPE.put("Feature/General/Description_of_Feature_or_Locale", "input");
+REF_TO_TYPE.put("Feature/General/Landuse_around_Feature", "picture");
+REF_TO_TYPE.put("Feature/General/Landuse_on_top_of_Feature", "picture");
+REF_TO_TYPE.put("Feature/General/Position_in_the_landscape", "dropdown");
+REF_TO_TYPE.put("Feature/General/Feature_prominence", "dropdown");
+REF_TO_TYPE.put("Feature/General/Latitude", "input");
+REF_TO_TYPE.put("Feature/General/Longitude", "input");
+REF_TO_TYPE.put("Feature/General/Northing", "input");
+REF_TO_TYPE.put("Feature/General/Easting", "input");
+REF_TO_TYPE.put("Feature/General/Accuracy", "input");
+REF_TO_TYPE.put("Feature/General/Take_From_GPS_1", "button");
+REF_TO_TYPE.put("Feature/General/Handheld_GPS_point", "input");
+REF_TO_TYPE.put("Feature/General/Elevation", "input");
+REF_TO_TYPE.put("Feature/General/Facing_Direction_For_Photo", "dropdown");
+REF_TO_TYPE.put("Feature/General/Notes_and_Photo_ID", "input");
+REF_TO_TYPE.put("Feature/General/Photo", "camera");
+REF_TO_TYPE.put("Feature/General/Photo_Button_1", "button");
+REF_TO_TYPE.put("Feature/Additional_GPS/New_GPS_Location", "button");
+REF_TO_TYPE.put("Feature/Additional_GPS/GPS_Location_List", "dropdown");
+REF_TO_TYPE.put("Feature/Dimensions/Height_Max", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Width_Max", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Length_Max", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Diameter_Max", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Height_Min", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Width_Min", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Length_Min", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Diameter_Min", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Additional_Dimension", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Other_Dimension", "input");
+REF_TO_TYPE.put("Feature/Dimensions/Shape_Notes", "input");
+REF_TO_TYPE.put("Feature/Material/Associated_Feature_or_Material", "checkbox");
+REF_TO_TYPE.put("Feature/Material/Surface_Material_Description", "input");
+REF_TO_TYPE.put("Feature/Material/Sample_Collected", "radio");
+REF_TO_TYPE.put("Feature/Material/Chronology_Estimate", "input");
+REF_TO_TYPE.put("Feature/Material/Associated_Feature_or_Material_Photo", "camera");
+REF_TO_TYPE.put("Feature/Material/Associated_Feature_or_Material_Photo_Button_1", "button");
+REF_TO_TYPE.put("Feature/CRM/Condition", "dropdown");
+REF_TO_TYPE.put("Feature/CRM/Principal_Source_of_Impact", "dropdown");
+REF_TO_TYPE.put("Feature/CRM/Other_Sources_of_Impact", "input");
+REF_TO_TYPE.put("Feature/CRM/Archaeological_potential", "dropdown");
+REF_TO_TYPE.put("Feature/CRM/Most_recent_damage_what", "dropdown");
+REF_TO_TYPE.put("Feature/CRM/Most_recent_damage_within", "dropdown");
+REF_TO_TYPE.put("Feature/CRM/RT_Description", "input");
+REF_TO_TYPE.put("Feature/CRM/Comments_and_Recommendations", "input");
+REF_TO_TYPE.put("Feature/CRM/CRM_Photos", "camera");
+REF_TO_TYPE.put("Feature/CRM/CRM_Photos_Button_1", "button");
 REF_TO_TYPE.put("Shape/Shape_Note/Label", "input");
 REF_TO_TYPE.put("Shape/Shape_Note/Note", "input");
-REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID", "input");
+REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_Feature_ID", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Latitude", "input");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information/Longitude", "input");
@@ -397,61 +397,62 @@ REF_TO_TYPE.put("Start/Main", "tab");
 REF_TO_TYPE.put("Start/Search", "tab");
 REF_TO_TYPE.put("Start/Table", "tab");
 REF_TO_TYPE.put("Start/Map", "tab");
-REF_TO_TYPE.put("Burial_Mound/General", "tab");
-REF_TO_TYPE.put("Burial_Mound/Additional_GPS", "tab");
-REF_TO_TYPE.put("Burial_Mound/Dimensions", "tab");
-REF_TO_TYPE.put("Burial_Mound/Material", "tab");
-REF_TO_TYPE.put("Burial_Mound/CRM", "tab");
+REF_TO_TYPE.put("Feature/General", "tab");
+REF_TO_TYPE.put("Feature/Additional_GPS", "tab");
+REF_TO_TYPE.put("Feature/Dimensions", "tab");
+REF_TO_TYPE.put("Feature/Material", "tab");
+REF_TO_TYPE.put("Feature/CRM", "tab");
 REF_TO_TYPE.put("Shape/Shape_Note", "tab");
 REF_TO_TYPE.put("GPS_Location/GPS_Location_Information", "tab");
 
-DATA_REFS.add("Burial_Mound/General/Mound_ID");
-DATA_REFS.add("Burial_Mound/General/Date");
-DATA_REFS.add("Burial_Mound/General/Burial_Mound_author");
-DATA_REFS.add("Burial_Mound/General/Type");
-DATA_REFS.add("Burial_Mound/General/Source");
-DATA_REFS.add("Burial_Mound/General/Description_of_Mound_or_Locale");
-DATA_REFS.add("Burial_Mound/General/Landuse_around_Mound");
-DATA_REFS.add("Burial_Mound/General/Landuse_on_top_of_Mound");
-DATA_REFS.add("Burial_Mound/General/Position_in_the_landscape");
-DATA_REFS.add("Burial_Mound/General/Mound_prominence");
-DATA_REFS.add("Burial_Mound/General/Latitude");
-DATA_REFS.add("Burial_Mound/General/Longitude");
-DATA_REFS.add("Burial_Mound/General/Northing");
-DATA_REFS.add("Burial_Mound/General/Easting");
-DATA_REFS.add("Burial_Mound/General/Accuracy");
-DATA_REFS.add("Burial_Mound/General/Handheld_GPS_point");
-DATA_REFS.add("Burial_Mound/General/Elevation");
-DATA_REFS.add("Burial_Mound/General/Facing_Direction_For_Photo");
-DATA_REFS.add("Burial_Mound/General/Notes_and_Photo_ID");
-DATA_REFS.add("Burial_Mound/General/Photo");
-DATA_REFS.add("Burial_Mound/Dimensions/Height_Max");
-DATA_REFS.add("Burial_Mound/Dimensions/Width_Max");
-DATA_REFS.add("Burial_Mound/Dimensions/Length_Max");
-DATA_REFS.add("Burial_Mound/Dimensions/Diameter_Max");
-DATA_REFS.add("Burial_Mound/Dimensions/Height_Min");
-DATA_REFS.add("Burial_Mound/Dimensions/Width_Min");
-DATA_REFS.add("Burial_Mound/Dimensions/Length_Min");
-DATA_REFS.add("Burial_Mound/Dimensions/Diameter_Min");
-DATA_REFS.add("Burial_Mound/Dimensions/Additional_Dimension");
-DATA_REFS.add("Burial_Mound/Dimensions/Other_Dimension");
-DATA_REFS.add("Burial_Mound/Dimensions/Shape_Notes");
-DATA_REFS.add("Burial_Mound/Material/Associated_Feature_or_Material");
-DATA_REFS.add("Burial_Mound/Material/Surface_Material_Description");
-DATA_REFS.add("Burial_Mound/Material/Sample_Collected");
-DATA_REFS.add("Burial_Mound/Material/Chronology_Estimate");
-DATA_REFS.add("Burial_Mound/Material/Associated_Feature_or_Material_Photo");
-DATA_REFS.add("Burial_Mound/CRM/Condition");
-DATA_REFS.add("Burial_Mound/CRM/Other_Sources_of_Impact");
-DATA_REFS.add("Burial_Mound/CRM/Archaeological_potential");
-DATA_REFS.add("Burial_Mound/CRM/Most_recent_damage_what");
-DATA_REFS.add("Burial_Mound/CRM/Most_recent_damage_within");
-DATA_REFS.add("Burial_Mound/CRM/RT_Description");
-DATA_REFS.add("Burial_Mound/CRM/Comments_and_Recommendations");
-DATA_REFS.add("Burial_Mound/CRM/CRM_Photos");
+DATA_REFS.add("Feature/General/Feature_ID");
+DATA_REFS.add("Feature/General/Date");
+DATA_REFS.add("Feature/General/Feature_author");
+DATA_REFS.add("Feature/General/Type");
+DATA_REFS.add("Feature/General/Source");
+DATA_REFS.add("Feature/General/Description_of_Feature_or_Locale");
+DATA_REFS.add("Feature/General/Landuse_around_Feature");
+DATA_REFS.add("Feature/General/Landuse_on_top_of_Feature");
+DATA_REFS.add("Feature/General/Position_in_the_landscape");
+DATA_REFS.add("Feature/General/Feature_prominence");
+DATA_REFS.add("Feature/General/Latitude");
+DATA_REFS.add("Feature/General/Longitude");
+DATA_REFS.add("Feature/General/Northing");
+DATA_REFS.add("Feature/General/Easting");
+DATA_REFS.add("Feature/General/Accuracy");
+DATA_REFS.add("Feature/General/Handheld_GPS_point");
+DATA_REFS.add("Feature/General/Elevation");
+DATA_REFS.add("Feature/General/Facing_Direction_For_Photo");
+DATA_REFS.add("Feature/General/Notes_and_Photo_ID");
+DATA_REFS.add("Feature/General/Photo");
+DATA_REFS.add("Feature/Dimensions/Height_Max");
+DATA_REFS.add("Feature/Dimensions/Width_Max");
+DATA_REFS.add("Feature/Dimensions/Length_Max");
+DATA_REFS.add("Feature/Dimensions/Diameter_Max");
+DATA_REFS.add("Feature/Dimensions/Height_Min");
+DATA_REFS.add("Feature/Dimensions/Width_Min");
+DATA_REFS.add("Feature/Dimensions/Length_Min");
+DATA_REFS.add("Feature/Dimensions/Diameter_Min");
+DATA_REFS.add("Feature/Dimensions/Additional_Dimension");
+DATA_REFS.add("Feature/Dimensions/Other_Dimension");
+DATA_REFS.add("Feature/Dimensions/Shape_Notes");
+DATA_REFS.add("Feature/Material/Associated_Feature_or_Material");
+DATA_REFS.add("Feature/Material/Surface_Material_Description");
+DATA_REFS.add("Feature/Material/Sample_Collected");
+DATA_REFS.add("Feature/Material/Chronology_Estimate");
+DATA_REFS.add("Feature/Material/Associated_Feature_or_Material_Photo");
+DATA_REFS.add("Feature/CRM/Condition");
+DATA_REFS.add("Feature/CRM/Principal_Source_of_Impact");
+DATA_REFS.add("Feature/CRM/Other_Sources_of_Impact");
+DATA_REFS.add("Feature/CRM/Archaeological_potential");
+DATA_REFS.add("Feature/CRM/Most_recent_damage_what");
+DATA_REFS.add("Feature/CRM/Most_recent_damage_within");
+DATA_REFS.add("Feature/CRM/RT_Description");
+DATA_REFS.add("Feature/CRM/Comments_and_Recommendations");
+DATA_REFS.add("Feature/CRM/CRM_Photos");
 DATA_REFS.add("Shape/Shape_Note/Label");
 DATA_REFS.add("Shape/Shape_Note/Note");
-DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID");
+DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_Feature_ID");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/GPS_Location_ID");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Latitude");
 DATA_REFS.add("GPS_Location/GPS_Location_Information/Longitude");
@@ -465,11 +466,11 @@ DATA_REFS.add("GPS_Location/GPS_Location_Information/Accuracy");
 
 
 
-HIER_REFS.add("Burial_Mound/CRM/Principal_Source_of_Impact");
+HIER_REFS.add("Feature/CRM/Principal_Source_of_Impact");
 
 TAB_GROUPS_AS_LIST.add("User");
 TAB_GROUPS_AS_LIST.add("Start");
-TAB_GROUPS_AS_LIST.add("Burial_Mound");
+TAB_GROUPS_AS_LIST.add("Feature");
 TAB_GROUPS_AS_LIST.add("Shape");
 TAB_GROUPS_AS_LIST.add("GPS_Location");
 
@@ -478,11 +479,11 @@ TABS_AS_LIST.add("Start/Main");
 TABS_AS_LIST.add("Start/Search");
 TABS_AS_LIST.add("Start/Table");
 TABS_AS_LIST.add("Start/Map");
-TABS_AS_LIST.add("Burial_Mound/General");
-TABS_AS_LIST.add("Burial_Mound/Additional_GPS");
-TABS_AS_LIST.add("Burial_Mound/Dimensions");
-TABS_AS_LIST.add("Burial_Mound/Material");
-TABS_AS_LIST.add("Burial_Mound/CRM");
+TABS_AS_LIST.add("Feature/General");
+TABS_AS_LIST.add("Feature/Additional_GPS");
+TABS_AS_LIST.add("Feature/Dimensions");
+TABS_AS_LIST.add("Feature/Material");
+TABS_AS_LIST.add("Feature/CRM");
 TABS_AS_LIST.add("Shape/Shape_Note");
 TABS_AS_LIST.add("GPS_Location/GPS_Location_Information");
 
@@ -598,7 +599,7 @@ HashSet getTabsAsHashSet() {
 
 List getStartingIdRefs() {
   List l = new ArrayList();
-  l.add("Start/Main/Next_Mound_ID");
+  l.add("Start/Main/Next_Feature_ID");
   l.add("Start/Main/Next_GPS_Location_ID");
   return l;
 }
@@ -1685,12 +1686,12 @@ void timedPopulateCursorList(String ref, String q, int limit) {
 
 void setUpTypeHierarchy() {
   //- 
-  //  - Burial Mound
+  //  - Feature
   //    - GPS Location
   //  - Shape
 
   n0 = Tree("", 1);
-  n1 = Tree("Burial Mound", 1);
+  n1 = Tree("Feature", 1);
   n2 = Tree("GPS Location", 1);
   n3 = Tree("Shape", 1);
 
@@ -2509,7 +2510,7 @@ void inheritFieldValue(String src, String dst) {
   inheritFieldValue(src, dst, true);
 }
 
-inheritFieldValue("Burial_Mound/General/Mound_ID", "GPS_Location/GPS_Location_Information/GPS_Location_Mound_ID", true);
+inheritFieldValue("Feature/General/Feature_ID", "GPS_Location/GPS_Location_Information/GPS_Location_Feature_ID", true);
 
 /******************************************************************************/
 /*                            NEW TAB REDIRECTION                             */
@@ -3241,36 +3242,36 @@ String validateFields(List fields, String format) {
 
 void validateStart() {
   List f = new ArrayList(); // Fields to be validated
-  f.add(fieldPair("Start/Main/Next_Mound_ID", "{Next_Mound_ID}"));
+  f.add(fieldPair("Start/Main/Next_Feature_ID", "{Next_Feature_ID}"));
   f.add(fieldPair("Start/Main/Next_GPS_Location_ID", "{Next_GPS_Location_ID}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
 }
-void validateBurialMound() {
+void validateFeature() {
   List f = new ArrayList(); // Fields to be validated
-  f.add(fieldPair("Burial_Mound/General/Mound_ID", "{Mound_ID}"));
-  f.add(fieldPair("Burial_Mound/General/Type", "{Type}"));
-  f.add(fieldPair("Burial_Mound/General/Landuse_around_Mound", "{Landuse_around_Mound}"));
-  f.add(fieldPair("Burial_Mound/General/Landuse_on_top_of_Mound", "{Landuse_on_top_of_Mound}"));
-  f.add(fieldPair("Burial_Mound/General/Mound_prominence", "{Mound_prominence}"));
-  f.add(fieldPair("Burial_Mound/General/Latitude", "{Latitude}"));
-  f.add(fieldPair("Burial_Mound/General/Longitude", "{Longitude}"));
-  f.add(fieldPair("Burial_Mound/General/Northing", "{Northing}"));
-  f.add(fieldPair("Burial_Mound/General/Easting", "{Easting}"));
-  f.add(fieldPair("Burial_Mound/General/Accuracy", "{Accuracy}"));
-  f.add(fieldPair("Burial_Mound/General/Facing_Direction_For_Photo", "{Facing_Direction_For_Photo}"));
-  f.add(fieldPair("Burial_Mound/General/Photo", "{Photo}"));
-  f.add(fieldPair("Burial_Mound/Dimensions/Height_Max", "{Height_Max__m_}"));
-  f.add(fieldPair("Burial_Mound/Dimensions/Width_Max", "{Width_Max__m_}"));
-  f.add(fieldPair("Burial_Mound/Dimensions/Length_Max", "{Length_Max__m_}"));
-  f.add(fieldPair("Burial_Mound/Dimensions/Diameter_Max", "{Diameter_Max__m_}"));
-  f.add(fieldPair("Burial_Mound/Material/Sample_Collected", "{Sample_Collected_}"));
-  f.add(fieldPair("Burial_Mound/CRM/Condition", "{Condition}"));
-  f.add(fieldPair("Burial_Mound/CRM/Principal_Source_of_Impact", "{Principal_Source_of_Impact}"));
-  f.add(fieldPair("Burial_Mound/CRM/Archaeological_potential", "{Archaeological_potential}"));
-  f.add(fieldPair("Burial_Mound/CRM/Most_recent_damage_what", "{Most_recent_damage__what_}"));
-  f.add(fieldPair("Burial_Mound/CRM/Most_recent_damage_within", "{Most_recent_damage__within_}"));
+  f.add(fieldPair("Feature/General/Feature_ID", "{Feature_ID}"));
+  f.add(fieldPair("Feature/General/Type", "{Type}"));
+  f.add(fieldPair("Feature/General/Landuse_around_Feature", "{Landuse_around_Feature}"));
+  f.add(fieldPair("Feature/General/Landuse_on_top_of_Feature", "{Landuse_on_top_of_Feature}"));
+  f.add(fieldPair("Feature/General/Feature_prominence", "{Feature_prominence}"));
+  f.add(fieldPair("Feature/General/Latitude", "{Latitude}"));
+  f.add(fieldPair("Feature/General/Longitude", "{Longitude}"));
+  f.add(fieldPair("Feature/General/Northing", "{Northing}"));
+  f.add(fieldPair("Feature/General/Easting", "{Easting}"));
+  f.add(fieldPair("Feature/General/Accuracy", "{Accuracy}"));
+  f.add(fieldPair("Feature/General/Facing_Direction_For_Photo", "{Facing_Direction_For_Photo}"));
+  f.add(fieldPair("Feature/General/Photo", "{Photo}"));
+  f.add(fieldPair("Feature/Dimensions/Height_Max", "{Height_Max__m_}"));
+  f.add(fieldPair("Feature/Dimensions/Width_Max", "{Width_Max__m_}"));
+  f.add(fieldPair("Feature/Dimensions/Length_Max", "{Length_Max__m_}"));
+  f.add(fieldPair("Feature/Dimensions/Diameter_Max", "{Diameter_Max__m_}"));
+  f.add(fieldPair("Feature/Material/Sample_Collected", "{Sample_Collected_}"));
+  f.add(fieldPair("Feature/CRM/Condition", "{Condition}"));
+  f.add(fieldPair("Feature/CRM/Principal_Source_of_Impact", "{Principal_Source_of_Impact}"));
+  f.add(fieldPair("Feature/CRM/Archaeological_potential", "{Archaeological_potential}"));
+  f.add(fieldPair("Feature/CRM/Most_recent_damage_what", "{Most_recent_damage__what_}"));
+  f.add(fieldPair("Feature/CRM/Most_recent_damage_within", "{Most_recent_damage__within_}"));
 
   String validationMessage = validateFields(f, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
@@ -3436,7 +3437,7 @@ String getTimestampNow(String fmt) {
 void populateAuthorAndTimestamp(String tabgroup) {
   Map tabgroupToAuthor    = new HashMap();
   Map tabgroupToTimestamp = new HashMap();
-  tabgroupToAuthor.put("Burial_Mound", "Burial_Mound/General/Burial_Mound_author");
+  tabgroupToAuthor.put("Feature", "Feature/General/Feature_author");
   
   String authorPath    = tabgroupToAuthor.get(tabgroup);
   String timestampPath = tabgroupToTimestamp.get(tabgroup);
@@ -3459,7 +3460,7 @@ void onClickUserLogin () {
 
 void onClickStartCreatenewRecord () {
   parentTabgroup__ = "Start";
-  newBurialMound();
+  newFeature();
 }
 
 void onClickStartCreateShape () {
@@ -3473,20 +3474,20 @@ void onClickStartCreateShape () {
 
 
 
-void onClickBurialMoundNewGPSLocation () {
-  newGPSLocation("Burial_Mound");
+void onClickFeatureNewGPSLocation () {
+  newGPSLocation("Feature");
 }
 addOnEvent("User/User/Log_in", "click", "onClickUserLogin()");
 addOnEvent("Start/Main/Create_new_Record", "click", "onClickStartCreatenewRecord()");
 addOnEvent("Start/Map/Create_Shape", "click", "onClickStartCreateShape()");
-addOnEvent("Burial_Mound/Additional_GPS/New_GPS_Location", "click", "onClickBurialMoundNewGPSLocation()");
+addOnEvent("Feature/Additional_GPS/New_GPS_Location", "click", "onClickFeatureNewGPSLocation()");
 
 /******************************************************************************/
 /*                   AUDIO, CAMERA, FILE AND VIDEO BINDINGS                   */
 /******************************************************************************/
-addOnEvent("Burial_Mound/General/Photo_Button_1", "click", "attachPictureTo(\"Burial_Mound/General/Photo\")");
-addOnEvent("Burial_Mound/Material/Associated_Feature_or_Material_Photo_Button_1", "click", "attachPictureTo(\"Burial_Mound/Material/Associated_Feature_or_Material_Photo\")");
-addOnEvent("Burial_Mound/CRM/CRM_Photos_Button_1", "click", "attachPictureTo(\"Burial_Mound/CRM/CRM_Photos\")");
+addOnEvent("Feature/General/Photo_Button_1", "click", "attachPictureTo(\"Feature/General/Photo\")");
+addOnEvent("Feature/Material/Associated_Feature_or_Material_Photo_Button_1", "click", "attachPictureTo(\"Feature/Material/Associated_Feature_or_Material_Photo\")");
+addOnEvent("Feature/CRM/CRM_Photos_Button_1", "click", "attachPictureTo(\"Feature/CRM/CRM_Photos\")");
 
 /******************************************************************************/
 /*                 BINDINGS FOR 'VIEW ATTACHED FILES' BUTTONS                 */
@@ -3508,7 +3509,7 @@ void addNavigationButtons(String tabgroup) {
   List tabgroupsToValidate = new ArrayList();
   tabgroupsToValidate.add("Start");
   tabgroupsToValidate.add("GPS_Location");
-  tabgroupsToValidate.add("Burial_Mound");
+  tabgroupsToValidate.add("Feature");
   addNavigationButton("new", new ActionButtonCallback() {
     actionOnLabel() {
       "{New}";
@@ -3810,14 +3811,14 @@ void loadEntityFrom(String entityID, String onFail) {
 }
 
 
-void newBurialMound(String parent){
-  String tabgroup = "Burial_Mound";
+void newFeature(String parent){
+  String tabgroup = "Feature";
   if (!isNull(parent)) {
     triggerAutoSave();
     parentTabgroup   = parent;
     parentTabgroup__ = parent;
   }
-  if (isNull("Start/Main/Next_Mound_ID")) {
+  if (isNull("Start/Main/Next_Feature_ID")) {
     showWarning("{Alert}", "{A_next_ID_has_not_been_entered_please_provide_one}");
     return;
   }
@@ -3826,13 +3827,13 @@ void newBurialMound(String parent){
   newTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
-  incAutoNum("Burial_Mound/General/Mound_ID");
+  incAutoNum("Feature/General/Feature_ID");
 
   executeOnEvent(tabgroup, "create");
 }
 
-void newBurialMound (){
-  newBurialMound(null);
+void newFeature (){
+  newFeature(null);
 }
 
 void newShape(String parent){
@@ -3881,18 +3882,18 @@ void newGPSLocation(String parent){
 void newGPSLocation (){
   newGPSLocation(null);
 }
-void duplicateBurialMound(){
-  String tabgroup = "Burial_Mound";
+void duplicateFeature(){
+  String tabgroup = "Feature";
   String uuidOld = getUuid(tabgroup);
   setUuid(tabgroup, "");
   disableAutoSave(tabgroup);
-  incAutoNum("Burial_Mound/General/Mound_ID");
+  incAutoNum("Feature/General/Feature_ID");
   clearGpsInTabGroup(tabgroup);
   populateAuthorAndTimestamp(tabgroup);
   populateEntityListsInTabGroup(tabgroup);
-  populateCameraPictureGallery("Burial_Mound/General/Photo", new ArrayList());
-  populateCameraPictureGallery("Burial_Mound/Material/Associated_Feature_or_Material_Photo", new ArrayList());
-  populateCameraPictureGallery("Burial_Mound/CRM/CRM_Photos", new ArrayList());
+  populateCameraPictureGallery("Feature/General/Photo", new ArrayList());
+  populateCameraPictureGallery("Feature/Material/Associated_Feature_or_Material_Photo", new ArrayList());
+  populateCameraPictureGallery("Feature/CRM/CRM_Photos", new ArrayList());
   executeOnEvent(tabgroup, "copy");
 
   saveCallback = new SaveCallback() {
@@ -4026,7 +4027,7 @@ void duplicateGPSLocation(){
     }
   });
 }
-addOnEvent("Burial_Mound", "save", "populateEntityListsOfArchEnt(\"Burial_Mound\")");
+addOnEvent("Feature", "save", "populateEntityListsOfArchEnt(\"Feature\")");
 addOnEvent("Shape", "save", "populateEntityListsOfArchEnt(\"Shape\")");
 addOnEvent("GPS_Location", "save", "populateEntityListsOfArchEnt(\"GPS_Location\")");
 
@@ -4036,10 +4037,10 @@ void doNotDelete(){
 
 addOnEvent("User", "show", "removeNavigationButtons()");
 addOnEvent("Start", "show", "removeNavigationButtons()");
-addOnEvent("Burial_Mound", "show", "removeNavigationButtons()");
+addOnEvent("Feature", "show", "removeNavigationButtons()");
 addOnEvent("Shape", "show", "removeNavigationButtons()");
 addOnEvent("GPS_Location", "show", "removeNavigationButtons()");
-addOnEvent("Burial_Mound", "show", "addNavigationButtons(\"Burial_Mound\")");
+addOnEvent("Feature", "show", "addNavigationButtons(\"Feature\")");
 addOnEvent("Shape", "show", "addNavigationButtons(\"Shape\")");
 addOnEvent("GPS_Location", "show", "addNavigationButtons(\"GPS_Location\")");
 
@@ -4054,7 +4055,7 @@ addOnEvent("Start/Search/Search_Term"   , "click" , "clearSearch()");
 addOnEvent("Start/Search/Entity_Types"  , "click" , "search()");
 entityTypes = new ArrayList();
 entityTypes.add(new NameValuePair("{All}", ""));
-entityTypes.add(new NameValuePair("{Burial_Mound}", "Burial Mound"));
+entityTypes.add(new NameValuePair("{Feature}", "Feature"));
 entityTypes.add(new NameValuePair("{Shape}", "Shape"));
 entityTypes.add(new NameValuePair("{GPS_Location}", "GPS Location"));
 populateDropDown("Start/Search/Entity_Types", entityTypes);
@@ -4091,8 +4092,8 @@ void search(){
   Log.d("Module", "Search query: " + searchQuery);
 }
 
-void loadBurialMoundFrom(String uuid) {
-  String tabgroup = "Burial_Mound";
+void loadFeatureFrom(String uuid) {
+  String tabgroup = "Feature";
   setUuid(tabgroup, uuid);
   if (isNull(uuid)) return;
 
@@ -4140,12 +4141,12 @@ void loadGPSLocationFrom(String uuid) {
 /******************************************************************************/
 /*                          TAKE FROM GPS BUTTON(S)                           */
 /******************************************************************************/
-addOnEvent("Burial_Mound/General/Take_From_GPS_1", "click", "takePoint(\"Burial_Mound\")");
+addOnEvent("Feature/General/Take_From_GPS_1", "click", "takePoint(\"Feature\")");
 addOnEvent("GPS_Location/GPS_Location_Information/Take_From_GPS_1", "click", "takePoint(\"GPS_Location\")");
 
 Map getTakeFromGpsMappings() {
   Map tabgroupToTabRef = new HashMap();
-  tabgroupToTabRef.put("Burial_Mound", "Burial_Mound/General");
+  tabgroupToTabRef.put("Feature", "Feature/General");
   tabgroupToTabRef.put("GPS_Location", "GPS_Location/GPS_Location_Information");
   return tabgroupToTabRef;
 }
@@ -4284,7 +4285,7 @@ void loadEntityFromScannedQrCode() {
 /*                       AUTONUMBERING HELPER FUNCTIONS                       */
 /******************************************************************************/
 Map AUTONUM_DEST_TO_SOURCE = new HashMap();
-AUTONUM_DEST_TO_SOURCE.put("Burial_Mound/General/Mound_ID", "Start/Main/Next_Mound_ID");
+AUTONUM_DEST_TO_SOURCE.put("Feature/General/Feature_ID", "Start/Main/Next_Feature_ID");
 AUTONUM_DEST_TO_SOURCE.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "Start/Main/Next_GPS_Location_ID");
 
 /*
@@ -4483,10 +4484,10 @@ String getEntityMenuPopulationFunction(String[] menuDescriptor) {
 
 ENTITY_MENUS = new ArrayList();
 ENTITY_MENUS.add(new String[] {
-    "Burial_Mound/Additional_GPS/GPS_Location_List",
-    "getUuid(\"Burial_Mound\")",
+    "Feature/Additional_GPS/GPS_Location_List",
+    "getUuid(\"Feature\")",
     "GPS Location",
-    "Burial Mound - GPS Location"
+    "Feature - GPS Location"
 });
 for (m : ENTITY_MENUS) {
   String functionCall = getEntityMenuPopulationFunction(m);
@@ -4503,7 +4504,7 @@ for (m : ENTITY_MENUS) {
   addOnEvent(ref, evt, cmd);
 }
 
-addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity(true)");
+addOnEvent("Feature/Additional_GPS/GPS_Location_List", "click", "loadEntity(true)");
 /******************************************************************************/
 /*                             HANDWRITTEN LOGIC                              */
 /******************************************************************************/
@@ -4562,7 +4563,7 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
     refreshMap(mapRef);
   }
 
-  addOnEventCond("Start/Main/Create_Shape", "click", "checkForGeometry()");
+  addOnEventCond("Start/Map/Create_Shape", "click", "checkForGeometry()");
   addOnEvent(
       "Start/Map/Create_Shape",
       "click",
@@ -4580,7 +4581,7 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
 
   /****************************** DATE POPULATION *******************************/
   void setDayMonth() {
-    ref     = "Burial_Mound/General/Date";
+    ref     = "Feature/General/Date";
 
     fmt     = "dd MMM";
     date    = new Date();
@@ -4592,7 +4593,7 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
     setFieldValue(ref, dateStr);
   }
 
-  addOnEvent("Burial_Mound", "create", "setDayMonth()");
+  addOnEvent("Feature", "create", "setDayMonth()");
 
   /********************************* TABLE VIEW *********************************/
   addOnEvent("Start/Table/Select_Date", "show", "populateDate()");
@@ -4668,8 +4669,8 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
      query += "      left outer join vocabulary using (attributeid, vocabid) ";
      query += "    order by uuid, aentcountorder, vocabcountorder ";
      query += "  ) ";
-     query += "  where aenttypename='Burial Mound' ";
-     query += "  and attributename in ('Mound ID', 'Type', 'Date', 'Landuse around Mound', 'Landuse on top of Mound', 'Height Max', 'Diameter Max') ";
+     query += "  where aenttypename='Feature' ";
+     query += "  and attributename in ('Feature ID', 'Type', 'Date', 'Landuse around Feature', 'Landuse on top of Feature', 'Height Max', 'Diameter Max') ";
      query += "  and uuid in ( select uuid from latestNonDeletedAentValue where measure = {date}) ";
      query += "  group by uuid, attributeid ";
      query += "  having response is not null) ";
@@ -4682,11 +4683,11 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
      actionIdx      = 0;
      actionCallback = "loadEntityFromTable()";
      headers.add("");
-     headers.add("Mound ID");
+     headers.add("Feature ID");
      headers.add("Type");
      headers.add("Date");
-     headers.add("Landuse around Mound");
-     headers.add("Landuse on top of Mound");
+     headers.add("Landuse around Feature");
+     headers.add("Landuse on top of Feature");
      headers.add("Height Max");
      headers.add("Diameter Max");
 
@@ -4767,13 +4768,13 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
     */
     String refMap = "Start/Map/Map";
     isEntity = true;
-    queryName = "Burial Mound";
-    querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Burial Mound'";
+    queryName = "Feature";
+    querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Feature'";
     ps = createPointStyle(10, Color.BLUE, 0.2f, 0.5f);
     ls = createLineStyle(10, Color.BLUE, 0.05f, 0.3f, null);
     pos = createPolygonStyle(10, Color.parseColor("#440000FF"), createLineStyle(10, Color.parseColor("#AA000000"), 0.01f, 0.3f, null));
     ts = createTextStyle(10, Color.BLUE, 30, Typeface.SANS_SERIF);
-    showDatabaseLayer(refMap, "Burial Mound Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
+    showDatabaseLayer(refMap, "Feature Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
     setMapZoom(MAP_REF, 13.0f);
   }
   initMap();
@@ -4830,14 +4831,14 @@ addOnEvent("Burial_Mound/Additional_GPS/GPS_Location_List", "click", "loadEntity
   }
 
   /*************************** Retain field Source value **********************/
-  insertIntoLocalSettingsOnChange("Burial_Mound/General/Source");
-  addOnEvent("Burial_Mound", "create", "setFieldValueFromLocalSettings(\"Burial_Mound/General/Source\")");
+  insertIntoLocalSettingsOnChange("Feature/General/Source");
+  addOnEvent("Feature", "create", "setFieldValueFromLocalSettings(\"Feature/General/Source\")");
 
   /********************** Custom Location for Valdiate button *****************/
-  // Add validation button as the first item in Burial_Mound/General tab
-  addOnEvent("Burial_Mound/General/Validate", "click", "validateBurialMound()");
+  // Add validation button as the first item in Feature/General tab
+  addOnEvent("Feature/General/Validate", "click", "validateFeature()");
 
-  addOnEvent("Burial_Mound", "copy", "setDayMonth()");
+  addOnEvent("Feature", "copy", "setDayMonth()");
 
   /**************************    No null user login   ***************************/
   // Check if userId is null, if so then prompt warning message, else allow login

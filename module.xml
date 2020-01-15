@@ -11,7 +11,7 @@
 
 <Start f="nodata">
   <Main>
-    <Create_new_Record t="button" l="Burial_Mound"/>
+    <Create_new_Record t="button" l="Feature"/>
     <autonum/>
     <GPS_Diagnostics t="gpsdiag"/>
   </Main>
@@ -28,15 +28,11 @@
   </Map>
 </Start>
 
-<Burial_Mound>
+<Feature>
+  <fmt>{{Feature_ID}}</fmt>
   <General>
     <Validate t="button"/>
-    <Mound_ID f="id notnull autonum">
-      <str>
-        <pos>1</pos>
-        <fmt>$0</fmt>
-      </str>
-    </Mound_ID>
+    <Feature_ID f="notnull autonum"/>
     <Date f="readonly"/>
     <author/>
     <Type f="notnull">
@@ -63,17 +59,17 @@
         <opt>Other</opt>
       </opts>
     </Source>
-    <Description_of_Mound_or_Locale>
+    <Description_of_Feature_or_Locale>
       <desc>
         Describe the location in relation to local topography and relief (optional)
       </desc>
-    </Description_of_Mound_or_Locale>
-    <Landuse_around_Mound t="picture" f="notnull htmldesc">
+    </Description_of_Feature_or_Locale>
+    <Landuse_around_Feature t="picture" f="notnull htmldesc">
       <desc><![CDATA[
         <i>Description:</i>
         <br>
         <div>
-            <p>Landuse around the mound. Choose the majority landuse.</p>
+            <p>Landuse around the feature. Choose the majority landuse.</p>
             <hr/>
         </div>
       ]]></desc>
@@ -210,13 +206,13 @@
           ]]></desc>
         </opt>
       </opts>
-    </Landuse_around_Mound>
-    <Landuse_on_top_of_Mound t="picture" f="notnull htmldesc">
+    </Landuse_around_Feature>
+    <Landuse_on_top_of_Feature t="picture" f="notnull htmldesc">
       <desc><![CDATA[
         <i>Description:</i>
         <br>
         <div>
-            <p>Landuse on top of mound. Choose majority.</p>
+            <p>Landuse on top of feature. Choose majority.</p>
             <hr/>
         </div>
       ]]></desc>
@@ -356,7 +352,7 @@
           ]]></desc>
         </opt>
       </opts>
-    </Landuse_on_top_of_Mound>
+    </Landuse_on_top_of_Feature>
     <Position_in_the_landscape>
       <opts>
         <opt>Valley Bottom or Plain</opt>
@@ -368,14 +364,14 @@
         <opt>Hilltop</opt>
       </opts>
     </Position_in_the_landscape>
-    <Mound_prominence f="notnull">
+    <Feature_prominence f="notnull">
       <desc>
-        This is the team's subjective measure of how prominent the mound is
+        This is the team's subjective measure of how prominent the feature is
         within its landscape setting. It is understood that other circumstances
         contribute to the overall measure, such as weather/visibility, line of
-        approach, mound height, elevation, surrounding landuse, geomorphology,
-        and vegetation. Teams are to assess how noticeable the mound is in its
-        current condition and how controlling the view from the mound is. 
+        approach, feature height, elevation, surrounding landuse, geomorphology,
+        and vegetation. Teams are to assess how noticeable the feature is in its
+        current condition and how controlling the view from the feature is. 
       </desc>
       <opts>
         <opt>
@@ -408,7 +404,7 @@
           </desc>
         </opt>
       </opts>
-    </Mound_prominence>
+    </Feature_prominence>
     <gps f="notnull"/>
     <Handheld_GPS_point b="decimal"/>
     <Elevation b="decimal">
@@ -488,21 +484,21 @@
         <Diameter_Min   b="decimal">
           Diameter Min (m)
           <desc>
-            The shorter axis in diameter, if mound ellipsoid
+            The shorter axis in diameter, if feature ellipsoid
           </desc>
         </Diameter_Min>
       </col>
     </cols>
-    <Additional_Dimention   b="decimal">
-      Additional Dimention (m)
-    </Additional_Dimention>
+    <Additional_Dimension   b="decimal">
+      Additional Dimension (m)
+    </Additional_Dimension>
     <Other_Dimension/>
     <Shape_Notes/>
   </Dimensions>
   <Material>
     <Associated_Feature_or_Material t="checkbox">
       <desc>
-        Stone wall (krepis) is found either at the foot of the mound, or inside it (upon excavation). Enclosure is a fence or a circle of variable material either around or some distance outside of the mound. Standing features in the vicinity comprise other standing stone or architectural features associated with the mound. Artefact scatter indicates a discreet and bounded concentration of manmade objects on the surface of the mound or its close vicinity. Loose artefacts indicates one or two artefacts dispersed on or around mound. Bones denote bioarchaeological remains, human or animal. Other - please use the annotation to describe.
+        Stone wall (krepis) is found either at the foot of the feature, or inside it (upon excavation). Enclosure is a fence or a circle of variable material either around or some distance outside of the feature. Standing features in the vicinity comprise other standing stone or architectural features associated with the feature. Artefact scatter indicates a discrete and bounded concentration of manmade objects on the surface of the feature or its close vicinity. Loose artefacts indicates one or two artefacts dispersed on or around feature. Bones denote bioarchaeological remains, human or animal. Other - please use the annotation to describe.
       </desc>
       <opts>
         <opt>
@@ -561,40 +557,43 @@
   <CRM>
     <Condition f="notnull">
       <desc>
-        Condition here describes a measurable change in the state of a burial mound (as compared with some prior condition of the state). Please assess the amount of anthropogenic and natural impacts that the mound has suffered. Such impacts can be direct or indirect (caused by action but occur later in time or farther removed in space). They can be discrete or continuous, depending on whether the cause occurs only once, or recurs at intervals.
+        Condition here describes a measurable change in the state of a feature (as compared with some prior condition of the state). Please assess the amount of anthropogenic and natural impacts that the feature has suffered. Such impacts can be direct or indirect (caused by action but occur later in time or farther removed in space). They can be discrete or continuous, depending on whether the cause occurs only once, or recurs at intervals.
       </desc>
       <opts>
+        <opt>
+          N/A
+        </opt>
         <opt>
           0 - No observation
         </opt>
         <opt>
           1 - pristine
           <desc>
-            1 - pristine or only superficial damage, up to 10% of mound volume missing.
+            1 - pristine or only superficial damage, up to 10% of feature volume missing.
           </desc>
         </opt>
         <opt>
           2 - minor damage
           <desc>
-            2- minor damage, 10-25% of mound volume missing.
+            2- minor damage, 10-25% of feature volume missing.
           </desc>
         </opt>
         <opt>
           3 - damaged
           <desc>
-            3 - considerable damage, up to 50% of mound volume missing.
+            3 - considerable damage, up to 50% of feature volume missing.
           </desc>
         </opt>
         <opt>
           4 - seriously damaged
           <desc>
-            4 - massive amount of damage, more than 50% of mound missing.
+            4 - massive amount of damage, more than 50% of feature missing.
           </desc>
         </opt>
         <opt>
           5 - extinct or near extinct
           <desc>
-            5 - nearly nothing remains of the mound.
+            5 - nearly nothing remains of the feature.
           </desc>
         </opt>
       </opts>
@@ -624,28 +623,28 @@
     </Principal_Source_of_Impact>
     <Other_Sources_of_Impact/>
     <Archaeological_potential f="notnull">
-      <desc>Archaeological potential is result of site formation and developmental history of a site both of which affect what is archaeologically knowable (Wildesen 1984, Schiffer 1976), a subjective judgment of the physical status of as mound in relation to the preservation of information on its use for future archaeological study.</desc>
+      <desc>Archaeological potential is result of site formation and developmental history of a site both of which affect what is archaeologically knowable (Wildesen 1984, Schiffer 1976), a subjective judgment of the physical status of as feature in relation to the preservation of information on its use for future archaeological study.</desc>
       <opts>
         <opt>No observation
         </opt>
         <opt>1 - full
           <desc>
-            1 - mound appears close to original condition and is likely to retain its full archaeological potential.
+            1 - feature appears close to original condition and is likely to retain its full archaeological potential.
           </desc>
         </opt>
         <opt>2 - good
           <desc>
-            2 - mound is slightly damaged and some archaeological potential is impaired, but lots remains.
+            2 - feature is slightly damaged and some archaeological potential is impaired, but lots remains.
           </desc>
         </opt>
         <opt>3 - impaired
           <desc>
-            3 - archaeological potential of this mound is significantly compromised
+            3 - archaeological potential of this feature is significantly compromised
           </desc>
         </opt>
         <opt>4 - minimal
           <desc>
-            4 - archaeological potential of the mound is low or severly compromised
+            4 - archaeological potential of the feature is low or severly compromised
           </desc>
         </opt>
         <opt>5- none or nearly none
@@ -691,7 +690,7 @@
       <desc>Take a picture of each robber's trench with a scale.</desc>
     </CRM_Photos>
   </CRM>
-</Burial_Mound>
+</Feature>
 
 <Shape>
   <Shape_Note>
@@ -701,21 +700,11 @@
 </Shape>
 
 <GPS_Location>
-  <fmt>GPS-{{GPS_Location_Mound_ID $2}}-{{GPS_Location_ID $2}}</fmt>
+  <fmt>{{GPS_Location_Feature_ID}}-GPS-{{GPS_Location_ID}}</fmt>
   <GPS_Location_Information>
     <cols>
-      <GPS_Location_Mound_ID f="id readonly" i="Burial_Mound/General/Mound_ID">
-        <str>
-          <pos>1</pos>
-          <fmt>Mound_ID-$2-</fmt>
-        </str>
-      </GPS_Location_Mound_ID>
-      <GPS_Location_ID f="id notnull autonum">
-        <str>
-          <pos>2</pos>
-          <fmt>GPS-$2</fmt>
-        </str>
-      </GPS_Location_ID>
+      <GPS_Location_Feature_ID f="readonly" i="Feature/General/Feature_ID"/>
+      <GPS_Location_ID f="notnull autonum"/>
     </cols>
     <gps f="notnull"/>
   </GPS_Location_Information>
@@ -777,7 +766,7 @@
     refreshMap(mapRef);
   }
 
-  addOnEventCond("Start/Main/Create_Shape", "click", "checkForGeometry()");
+  addOnEventCond("Start/Map/Create_Shape", "click", "checkForGeometry()");
   addOnEvent(
       "Start/Map/Create_Shape",
       "click",
@@ -795,7 +784,7 @@
 
   /****************************** DATE POPULATION *******************************/
   void setDayMonth() {
-    ref     = "Burial_Mound/General/Date";
+    ref     = "Feature/General/Date";
 
     fmt     = "dd MMM";
     date    = new Date();
@@ -807,7 +796,7 @@
     setFieldValue(ref, dateStr);
   }
 
-  addOnEvent("Burial_Mound", "create", "setDayMonth()");
+  addOnEvent("Feature", "create", "setDayMonth()");
 
   /********************************* TABLE VIEW *********************************/
   addOnEvent("Start/Table/Select_Date", "show", "populateDate()");
@@ -883,8 +872,8 @@
      query += "      left outer join vocabulary using (attributeid, vocabid) ";
      query += "    order by uuid, aentcountorder, vocabcountorder ";
      query += "  ) ";
-     query += "  where aenttypename='Burial Mound' ";
-     query += "  and attributename in ('Mound ID', 'Type', 'Date', 'Landuse around Mound', 'Landuse on top of Mound', 'Height Max', 'Diameter Max') ";
+     query += "  where aenttypename='Feature' ";
+     query += "  and attributename in ('Feature ID', 'Type', 'Date', 'Landuse around Feature', 'Landuse on top of Feature', 'Height Max', 'Diameter Max') ";
      query += "  and uuid in ( select uuid from latestNonDeletedAentValue where measure = {date}) ";
      query += "  group by uuid, attributeid ";
      query += "  having response is not null) ";
@@ -897,11 +886,11 @@
      actionIdx      = 0;
      actionCallback = "loadEntityFromTable()";
      headers.add("");
-     headers.add("Mound ID");
+     headers.add("Feature ID");
      headers.add("Type");
      headers.add("Date");
-     headers.add("Landuse around Mound");
-     headers.add("Landuse on top of Mound");
+     headers.add("Landuse around Feature");
+     headers.add("Landuse on top of Feature");
      headers.add("Height Max");
      headers.add("Diameter Max");
 
@@ -971,7 +960,7 @@
     showDatabaseLayerByVocabName(vocabName, geoColor, layerName);
   }
   void initMap() {
-    //showBaseMap(MAP_REF, "Base Map", "files/data/Map/K-35-066-3_Razdel.tif");
+    //showBaseMap(MAP_REF, "Base Map", "files/data/Map/Perachora.tif");
     /*
     showDatabaseLayerByVocabName("{1___pristine}",   Color.GREEN);
     showDatabaseLayerByVocabName("{2___minor_damage}", Color.BLUE);
@@ -982,13 +971,13 @@
     */
     String refMap = "Start/Map/Map";
     isEntity = true;
-    queryName = "Burial Mound";
-    querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Burial Mound'";
+    queryName = "Feature";
+    querySQL = "SELECT uuid, aenttimestamp FROM latestNonDeletedArchEnt join aenttype using (aenttypeid) where aenttypename = 'Feature'";
     ps = createPointStyle(10, Color.BLUE, 0.2f, 0.5f);
     ls = createLineStyle(10, Color.BLUE, 0.05f, 0.3f, null);
     pos = createPolygonStyle(10, Color.parseColor("#440000FF"), createLineStyle(10, Color.parseColor("#AA000000"), 0.01f, 0.3f, null));
     ts = createTextStyle(10, Color.BLUE, 30, Typeface.SANS_SERIF);
-    showDatabaseLayer(refMap, "Burial Mound Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
+    showDatabaseLayer(refMap, "Feature Layer", isEntity, queryName, querySQL, ps, ls, pos, ts);
     setMapZoom(MAP_REF, 13.0f);
   }
   initMap();
@@ -1045,14 +1034,14 @@
   }
 
   /*************************** Retain field Source value **********************/
-  insertIntoLocalSettingsOnChange("Burial_Mound/General/Source");
-  addOnEvent("Burial_Mound", "create", "setFieldValueFromLocalSettings(\"Burial_Mound/General/Source\")");
+  insertIntoLocalSettingsOnChange("Feature/General/Source");
+  addOnEvent("Feature", "create", "setFieldValueFromLocalSettings(\"Feature/General/Source\")");
 
   /********************** Custom Location for Valdiate button *****************/
-  // Add validation button as the first item in Burial_Mound/General tab
-  addOnEvent("Burial_Mound/General/Validate", "click", "validateBurialMound()");
+  // Add validation button as the first item in Feature/General tab
+  addOnEvent("Feature/General/Validate", "click", "validateFeature()");
 
-  addOnEvent("Burial_Mound", "copy", "setDayMonth()");
+  addOnEvent("Feature", "copy", "setDayMonth()");
 
   /**************************    No null user login   ***************************/
   // Check if userId is null, if so then prompt warning message, else allow login

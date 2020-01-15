@@ -27,7 +27,7 @@
           <Start>
             <Main>
               <Create_new_Record/>
-              <Next_Mound_ID/>
+              <Next_Feature_ID/>
               <Next_GPS_Location_ID/>
               <GPS_Diagnostics/>
             </Main>
@@ -67,19 +67,19 @@
               <Create_Shape/>
             </Map>
           </Start>
-          <Burial_Mound>
+          <Feature>
             <General>
               <Validate/>
-              <Mound_ID/>
+              <Feature_ID/>
               <Date/>
-              <Burial_Mound_author/>
+              <Feature_author/>
               <Type/>
               <Source/>
-              <Description_of_Mound_or_Locale/>
-              <Landuse_around_Mound/>
-              <Landuse_on_top_of_Mound/>
+              <Description_of_Feature_or_Locale/>
+              <Landuse_around_Feature/>
+              <Landuse_on_top_of_Feature/>
               <Position_in_the_landscape/>
-              <Mound_prominence/>
+              <Feature_prominence/>
               <Colgroup_1>
                 <Col_1>
                   <Latitude/>
@@ -150,7 +150,7 @@
               <CRM_Photos/>
               <CRM_Photos_Button_1/>
             </CRM>
-          </Burial_Mound>
+          </Feature>
           <Shape>
             <Shape_Note>
               <Label/>
@@ -161,7 +161,7 @@
             <GPS_Location_Information>
               <Colgroup_1>
                 <Col_1>
-                  <GPS_Location_Mound_ID/>
+                  <GPS_Location_Feature_ID/>
                 </Col_1>
                 <Col_2>
                   <GPS_Location_ID/>
@@ -191,19 +191,19 @@
           </GPS_Location>
         </faims>
       </instance>
-      <bind nodeset="/faims/Start/Main/Next_Mound_ID" type="decimal"/>
+      <bind nodeset="/faims/Start/Main/Next_Feature_ID" type="decimal"/>
       <bind nodeset="/faims/Start/Main/Next_GPS_Location_ID" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/General/Handheld_GPS_point" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/General/Elevation" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_1/Height_Max" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_1/Width_Max" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_1/Length_Max" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_1/Diameter_Max" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Height_Min" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Width_Min" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Length_Min" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Colgroup_1/Col_2/Diameter_Min" type="decimal"/>
-      <bind nodeset="/faims/Burial_Mound/Dimensions/Additional_Dimension" type="decimal"/>
+      <bind nodeset="/faims/Feature/General/Handheld_GPS_point" type="decimal"/>
+      <bind nodeset="/faims/Feature/General/Elevation" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_1/Height_Max" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_1/Width_Max" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_1/Length_Max" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_1/Diameter_Max" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_2/Height_Min" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_2/Width_Min" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_2/Length_Min" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Colgroup_1/Col_2/Diameter_Min" type="decimal"/>
+      <bind nodeset="/faims/Feature/Dimensions/Additional_Dimension" type="decimal"/>
     </model>
   </h:head>
   <h:body>
@@ -253,8 +253,8 @@
         <trigger ref="Create_new_Record">
           <label>{Create_new_Record}</label>
         </trigger>
-        <input ref="Next_Mound_ID" faims_style_class="required">
-          <label>{Next_Mound_ID}</label>
+        <input ref="Next_Feature_ID" faims_style_class="required">
+          <label>{Next_Feature_ID}</label>
         </input>
         <input ref="Next_GPS_Location_ID" faims_style_class="required">
           <label>{Next_GPS_Location_ID}</label>
@@ -349,20 +349,20 @@
         </trigger>
       </group>
     </group>
-    <group ref="Burial_Mound" faims_archent_type="Burial Mound">
-      <label>{Burial_Mound}</label>
+    <group ref="Feature" faims_archent_type="Feature">
+      <label>{Feature}</label>
       <group ref="General">
         <label>{General}</label>
         <trigger ref="Validate">
           <label>{Validate}</label>
         </trigger>
-        <input faims_attribute_name="Mound ID" faims_attribute_type="measure" ref="Mound_ID" faims_style_class="moundID">
-          <label>{Mound_ID}</label>
+        <input faims_attribute_name="Feature ID" faims_attribute_type="measure" ref="Feature_ID" faims_style_class="required">
+          <label>{Feature_ID}</label>
         </input>
         <input faims_attribute_name="Date" faims_attribute_type="measure" ref="Date" faims_read_only="true">
           <label>{Date}</label>
         </input>
-        <input faims_attribute_name="Burial Mound author" faims_attribute_type="measure" ref="Burial_Mound_author" faims_read_only="true">
+        <input faims_attribute_name="Feature author" faims_attribute_type="measure" ref="Feature_author" faims_read_only="true">
           <label>{Author}</label>
         </input>
         <select1 faims_attribute_name="Type" faims_attribute_type="vocab" ref="Type" faims_style_class="required">
@@ -379,18 +379,18 @@
             <value>Options not loaded</value>
           </item>
         </select1>
-        <input faims_attribute_name="Description of Mound or Locale" faims_attribute_type="measure" ref="Description_of_Mound_or_Locale">
-          <label>{Description_of_Mound_or_Locale}</label>
+        <input faims_attribute_name="Description of Feature or Locale" faims_attribute_type="measure" ref="Description_of_Feature_or_Locale">
+          <label>{Description_of_Feature_or_Locale}</label>
         </input>
-        <select1 type="image" faims_attribute_name="Landuse around Mound" faims_attribute_type="vocab" ref="Landuse_around_Mound" faims_style_class="required" faims_html_description="true">
-          <label>{Landuse_around_Mound}</label>
+        <select1 type="image" faims_attribute_name="Landuse around Feature" faims_attribute_type="vocab" ref="Landuse_around_Feature" faims_style_class="required" faims_html_description="true">
+          <label>{Landuse_around_Feature}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
           </item>
         </select1>
-        <select1 type="image" faims_attribute_name="Landuse on top of Mound" faims_attribute_type="vocab" ref="Landuse_on_top_of_Mound" faims_style_class="required" faims_html_description="true">
-          <label>{Landuse_on_top_of_Mound}</label>
+        <select1 type="image" faims_attribute_name="Landuse on top of Feature" faims_attribute_type="vocab" ref="Landuse_on_top_of_Feature" faims_style_class="required" faims_html_description="true">
+          <label>{Landuse_on_top_of_Feature}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
@@ -403,8 +403,8 @@
             <value>Options not loaded</value>
           </item>
         </select1>
-        <select1 faims_attribute_name="Mound prominence" faims_attribute_type="vocab" ref="Mound_prominence" faims_style_class="required">
-          <label>{Mound_prominence}</label>
+        <select1 faims_attribute_name="Feature prominence" faims_attribute_type="vocab" ref="Feature_prominence" faims_style_class="required">
+          <label>{Feature_prominence}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
@@ -645,8 +645,8 @@
           <label/>
           <group ref="Col_1" faims_style="even">
             <label/>
-            <input faims_attribute_name="GPS Location Mound ID" faims_attribute_type="measure" ref="GPS_Location_Mound_ID" faims_read_only="true">
-              <label>{GPS_Location_Mound_ID}</label>
+            <input faims_attribute_name="GPS Location Feature ID" faims_attribute_type="measure" ref="GPS_Location_Feature_ID" faims_read_only="true">
+              <label>{GPS_Location_Feature_ID}</label>
             </input>
           </group>
           <group ref="Col_2" faims_style="even">
