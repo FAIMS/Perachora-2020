@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='utf-8'?>
 <dataSchema>
-  <RelationshipElement name="Burial Mound - GPS Location" type="hierarchical">
+  <RelationshipElement name="Feature - GPS Location" type="hierarchical">
     <description>A 1-to-n relationship between the parent and its children, respectively.</description>
     <parent>Parent Of</parent>
     <child>Child Of</child>
   </RelationshipElement>
-  <ArchaeologicalElement name="Burial Mound">
+  <ArchaeologicalElement name="Feature">
     <description></description>
-    <property name="Mound ID" type="measure" isIdentifier="true">
+    <property name="Feature ID" type="measure" isIdentifier="true">
       <description></description>
       <formatString>$2</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -17,7 +17,7 @@
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Burial Mound author" type="measure">
+    <property name="Feature author" type="measure">
       <description></description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -68,19 +68,19 @@
 <description> </description></term>
       </lookup>
     </property>
-    <property name="Description of Mound or Locale" type="measure">
+    <property name="Description of Feature or Locale" type="measure">
       <description>
         Describe the location in relation to local topography and relief (optional)
       </description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
-    <property name="Landuse around Mound" type="vocab">
+    <property name="Landuse around Feature" type="vocab">
       <description>
         &lt;i&gt;Description:&lt;/i&gt;
         &lt;br&gt;
         &lt;div&gt;
-            &lt;p&gt;Landuse around the mound. Choose the majority landuse.&lt;/p&gt;
+            &lt;p&gt;Landuse around the feature. Choose the majority landuse.&lt;/p&gt;
             &lt;hr/&gt;
         &lt;/div&gt;
       </description>
@@ -206,12 +206,12 @@
           </description></term>
       </lookup>
     </property>
-    <property name="Landuse on top of Mound" type="vocab">
+    <property name="Landuse on top of Feature" type="vocab">
       <description>
         &lt;i&gt;Description:&lt;/i&gt;
         &lt;br&gt;
         &lt;div&gt;
-            &lt;p&gt;Landuse on top of mound. Choose majority.&lt;/p&gt;
+            &lt;p&gt;Landuse on top of feature. Choose majority.&lt;/p&gt;
             &lt;hr/&gt;
         &lt;/div&gt;
       </description>
@@ -355,14 +355,14 @@
 <description> </description></term>
       </lookup>
     </property>
-    <property name="Mound prominence" type="vocab">
+    <property name="Feature prominence" type="vocab">
       <description>
-        This is the team's subjective measure of how prominent the mound is
+        This is the team's subjective measure of how prominent the feature is
         within its landscape setting. It is understood that other circumstances
         contribute to the overall measure, such as weather/visibility, line of
-        approach, mound height, elevation, surrounding landuse, geomorphology,
-        and vegetation. Teams are to assess how noticeable the mound is in its
-        current condition and how controlling the view from the mound is. 
+        approach, feature height, elevation, surrounding landuse, geomorphology,
+        and vegetation. Teams are to assess how noticeable the feature is in its
+        current condition and how controlling the view from the feature is. 
       </description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -515,7 +515,7 @@
     </property>
     <property name="Diameter Min" type="measure">
       <description>
-            The shorter axis in diameter, if mound ellipsoid
+            The shorter axis in diameter, if feature ellipsoid
           </description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -537,7 +537,7 @@
     </property>
     <property name="Associated Feature or Material" type="vocab">
       <description>
-        Stone wall (krepis) is found either at the foot of the mound, or inside it (upon excavation). Enclosure is a fence or a circle of variable material either around or some distance outside of the mound. Standing features in the vicinity comprise other standing stone or architectural features associated with the mound. Artefact scatter indicates a discreet and bounded concentration of manmade objects on the surface of the mound or its close vicinity. Loose artefacts indicates one or two artefacts dispersed on or around mound. Bones denote bioarchaeological remains, human or animal. Other - please use the annotation to describe.
+        Stone wall (krepis) is found either at the foot of the feature, or inside it (upon excavation). Enclosure is a fence or a circle of variable material either around or some distance outside of the feature. Standing features in the vicinity comprise other standing stone or architectural features associated with the feature. Artefact scatter indicates a discrete and bounded concentration of manmade objects on the surface of the feature or its close vicinity. Loose artefacts indicates one or two artefacts dispersed on or around feature. Bones denote bioarchaeological remains, human or animal. Other - please use the annotation to describe.
       </description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
@@ -547,7 +547,7 @@
         <term>{Glass}
 <description> </description></term>
         <term>{Lithics}
-<description></description></term>
+<description> </description></term>
         <term>{Metal}
 <description> </description></term>
         <term>{Pottery}
@@ -598,34 +598,34 @@
     </property>
     <property name="Condition" type="vocab">
       <description>
-        Condition here describes a measurable change in the state of a burial mound (as compared with some prior condition of the state). Please assess the amount of anthropogenic and natural impacts that the mound has suffered. Such impacts can be direct or indirect (caused by action but occur later in time or farther removed in space). They can be discrete or continuous, depending on whether the cause occurs only once, or recurs at intervals.
+        Condition here describes a measurable change in the state of a feature (as compared with some prior condition of the state). Please assess the amount of anthropogenic and natural impacts that the feature has suffered. Such impacts can be direct or indirect (caused by action but occur later in time or farther removed in space). They can be discrete or continuous, depending on whether the cause occurs only once, or recurs at intervals.
       </description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
-        <term>{N/A}
+        <term>{N_A}
 <description> </description></term>
         <term>{0___No_observation}
 <description> </description></term>
         <term>{1___pristine}
 <description>
-            1 - pristine or only superficial damage, up to 10% of mound volume missing.
+            1 - pristine or only superficial damage, up to 10% of feature volume missing.
           </description></term>
         <term>{2___minor_damage}
 <description>
-            2- minor damage, 10-25% of mound volume missing.
+            2- minor damage, 10-25% of feature volume missing.
           </description></term>
         <term>{3___damaged}
 <description>
-            3 - considerable damage, up to 50% of mound volume missing.
+            3 - considerable damage, up to 50% of feature volume missing.
           </description></term>
         <term>{4___seriously_damaged}
 <description>
-            4 - massive amount of damage, more than 50% of mound missing.
+            4 - massive amount of damage, more than 50% of feature missing.
           </description></term>
         <term>{5___extinct_or_near_extinct}
 <description>
-            5 - nearly nothing remains of the mound.
+            5 - nearly nothing remains of the feature.
           </description></term>
       </lookup>
     </property>
@@ -663,7 +663,7 @@
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="Archaeological potential" type="vocab">
-      <description>Archaeological potential is result of site formation and developmental history of a site both of which affect what is archaeologically knowable (Wildesen 1984, Schiffer 1976), a subjective judgment of the physical status of as mound in relation to the preservation of information on its use for future archaeological study.</description>
+      <description>Archaeological potential is result of site formation and developmental history of a site both of which affect what is archaeologically knowable (Wildesen 1984, Schiffer 1976), a subjective judgment of the physical status of as feature in relation to the preservation of information on its use for future archaeological study.</description>
       <formatString>{{if $1 then $1}}{{if and($1, $2) then " " }}{{if $2 then $2}}{{if $3 then " ($3)"}}{{if between($4,0,0.49) then "??" elsif lessThan($4,1) then "?" }}</formatString>
       <appendCharacterString> - </appendCharacterString>
       <lookup>
@@ -671,19 +671,19 @@
 <description> </description></term>
         <term>{1___full}
 <description>
-            1 - mound appears close to original condition and is likely to retain its full archaeological potential.
+            1 - feature appears close to original condition and is likely to retain its full archaeological potential.
           </description></term>
         <term>{2___good}
 <description>
-            2 - mound is slightly damaged and some archaeological potential is impaired, but lots remains.
+            2 - feature is slightly damaged and some archaeological potential is impaired, but lots remains.
           </description></term>
         <term>{3___impaired}
 <description>
-            3 - archaeological potential of this mound is significantly compromised
+            3 - archaeological potential of this feature is significantly compromised
           </description></term>
         <term>{4___minimal}
 <description>
-            4 - archaeological potential of the mound is low or severly compromised
+            4 - archaeological potential of the feature is low or severly compromised
           </description></term>
         <term>{5__none_or_nearly_none}
 <description>
@@ -770,14 +770,14 @@
   </ArchaeologicalElement>
   <ArchaeologicalElement name="GPS Location">
     <description></description>
-    <property name="GPS Location Mound ID" type="measure" isIdentifier="true">
+    <property name="GPS Location Feature ID" type="measure" isIdentifier="true">
       <description></description>
-      <formatString>$2-</formatString>
+      <formatString>$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="GPS Location ID" type="measure" isIdentifier="true">
       <description></description>
-      <formatString>GPS-$2</formatString>
+      <formatString>-GPS-$2</formatString>
       <appendCharacterString> - </appendCharacterString>
     </property>
     <property name="Latitude" type="measure">
