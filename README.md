@@ -1,8 +1,8 @@
 # About this module:
-This module was created for the **The Perachora Peninsula Archaeological Project**, based at Macquarie University, Sydney, Australia. The module has been designed to document the current condition and an exact location legacy data and features in the environs of teh Perachora Sanctuary, Greece.
+This module was created for the **The Perachora Peninsula Archaeological Project**, based at Macquarie University, Sydney, Australia. The module has been designed to document the current condition and an exact location legacy data and features in the environs of the Perachora Heraion Sanctuary, Greece.
  
 ## Authorship:
-This module was co-developed by Adela Sobotkova and Petra Hermankova, Aarhus University. The current module was built upon the [TRAP Burial Mound](https://github.com/FAIMS/burial) module.
+This module was co-developed by Adela Sobotkova and Petra Hermankova, Aarhus University. The current module was built upon the existing [TRAP Burial Mound](https://github.com/FAIMS/burial) module.
  
 ## Funding:
 N/A
@@ -59,12 +59,6 @@ If you have any questions about the module, please contact the FAIMS team at **e
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_10.png" width="250"/>
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_11.png" width="250"/>
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_12.png" width="250"/>
-</p>
-
-<p align="left">
-  <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_13.png" width="250"/>
-  <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_14.png" width="250"/>
-  <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_15.png" width="250"/>
 </p>
 
 <p align="left">
