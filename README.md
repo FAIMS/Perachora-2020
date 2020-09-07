@@ -35,7 +35,10 @@ This module can be downloaded from this GitHub repository.
 ## Contact info:
 For more details about the **PPAP** please contact the project director Susan Lupack susan.lupack@mq.edu.au.
 
-If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you within one business day.
+If you have any questions about the module, please contact the FAIMS team at **enquiries@fedarch.org** and we will get back to you as soon as possible.
+
+---
+# Screenshots from the module:
 
 <p align="left">
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_01.png" width="250"/>
@@ -71,4 +74,11 @@ If you have any questions about the module, please contact the FAIMS team at **e
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_19.png" width="250"/>
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_20.png" width="250"/>
   <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/Perachora2020_LDV_21.png" width="250"/>
+</p>
+
+---
+# Photos from the field: 
+
+<p align="left">
+  <img src="https://github.com/FAIMS/Perachora-2020/blob/master/screenshots/PPAP20200125_Acropolis_Petra.jpg" "Petra Hermankova in the field using the FAIMS module to record an underground water cistern on the top the Perachora Acropolis, January 2020"/>
 </p>
