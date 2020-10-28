@@ -1,10 +1,11 @@
 /*
- * GENERATED WITH FAIMS-TOOLS, SHA1: 2a1f0f3a3e1f9ce5bcbe4eb5cd952554b865b911
+ * GENERATED WITH FAIMS-TOOLS, SHA1: f671bb8e32c7cfe1bce7e42013cad133e95d6ea0
  */
 import android.util.Log;
 import android.os.Build.MODEL;
 import java.util.concurrent.atomic.AtomicInteger;
 import android.database.DatabaseUtils;
+import java.util.concurrent.Callable;
 
 // Beanshell won't let me write "\0".
 final String SEP = Character.toString ((char) 0);
@@ -311,6 +312,8 @@ HashMap ATTRIB_NAMES_NON_STANDARD         = new HashMap();
 List    NODATA_TAB_GROUPS                 = new ArrayList();
 List    NOAUTOSAVE_TAB_GROUPS             = new ArrayList();
 HashSet NOAUTOSAVE_TAB_GROUPS_AS_HASH_SET = null;
+HashMap REF_TO_FLAG_STRING                = new HashMap();
+
 NODATA_TAB_GROUPS.add("User");
 NODATA_TAB_GROUPS.add("Start");
 
@@ -488,6 +491,102 @@ TABS_AS_LIST.add("Shape/Shape_Note");
 TABS_AS_LIST.add("GPS_Location/GPS_Location_Information");
 
 
+
+REF_TO_FLAG_STRING.put("User/User/User", "user");
+REF_TO_FLAG_STRING.put("User/User/Log_in", "");
+REF_TO_FLAG_STRING.put("Start/Main/Create_new_Record", "");
+REF_TO_FLAG_STRING.put("Start/Main/Next_Feature_ID", "notnull");
+REF_TO_FLAG_STRING.put("Start/Main/Next_GPS_Location_ID", "notnull");
+REF_TO_FLAG_STRING.put("Start/Main/GPS_Diagnostics", "");
+REF_TO_FLAG_STRING.put("Start/Search/Search_Term", "");
+REF_TO_FLAG_STRING.put("Start/Search/Search_Button", "");
+REF_TO_FLAG_STRING.put("Start/Search/Entity_Types", "");
+REF_TO_FLAG_STRING.put("Start/Search/Entity_List", "");
+REF_TO_FLAG_STRING.put("Start/Table/Select_Date", "");
+REF_TO_FLAG_STRING.put("Start/Table/Table", "");
+REF_TO_FLAG_STRING.put("Start/Map/Map", "");
+REF_TO_FLAG_STRING.put("Start/Map/Center_Me_1", "");
+REF_TO_FLAG_STRING.put("Start/Map/Save_Map_Settings_1", "");
+REF_TO_FLAG_STRING.put("Start/Map/Create_Shape", "");
+REF_TO_FLAG_STRING.put("Feature/General/Validate", "");
+REF_TO_FLAG_STRING.put("Feature/General/Feature_ID", "autonum notnull id");
+REF_TO_FLAG_STRING.put("Feature/General/Date", "readonly");
+REF_TO_FLAG_STRING.put("Feature/General/Feature_author", "readonly");
+REF_TO_FLAG_STRING.put("Feature/General/Type", "notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Source", "");
+REF_TO_FLAG_STRING.put("Feature/General/Description_of_Feature_or_Locale", "");
+REF_TO_FLAG_STRING.put("Feature/General/Landuse_around_Feature", "htmldesc notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Landuse_on_top_of_Feature", "htmldesc notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Position_in_the_landscape", "");
+REF_TO_FLAG_STRING.put("Feature/General/Feature_prominence", "notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Latitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Longitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Northing", "readonly notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Easting", "readonly notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Accuracy", "readonly notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Take_From_GPS_1", "");
+REF_TO_FLAG_STRING.put("Feature/General/Handheld_GPS_point", "");
+REF_TO_FLAG_STRING.put("Feature/General/Elevation", "");
+REF_TO_FLAG_STRING.put("Feature/General/Facing_Direction_For_Photo", "notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Notes_and_Photo_ID", "");
+REF_TO_FLAG_STRING.put("Feature/General/Photo", "htmldesc notnull");
+REF_TO_FLAG_STRING.put("Feature/General/Photo_Button_1", "");
+REF_TO_FLAG_STRING.put("Feature/Additional_GPS/New_GPS_Location", "");
+REF_TO_FLAG_STRING.put("Feature/Additional_GPS/GPS_Location_List", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Height_Max", "notnull");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Width_Max", "notnull");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Length_Max", "notnull");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Diameter_Max", "notnull");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Height_Min", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Width_Min", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Length_Min", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Diameter_Min", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Additional_Dimension", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Other_Dimension", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions/Shape_Notes", "");
+REF_TO_FLAG_STRING.put("Feature/Material/Associated_Feature_or_Material", "");
+REF_TO_FLAG_STRING.put("Feature/Material/Surface_Material_Description", "");
+REF_TO_FLAG_STRING.put("Feature/Material/Sample_Collected", "notnull");
+REF_TO_FLAG_STRING.put("Feature/Material/Chronology_Estimate", "");
+REF_TO_FLAG_STRING.put("Feature/Material/Associated_Feature_or_Material_Photo", "");
+REF_TO_FLAG_STRING.put("Feature/Material/Associated_Feature_or_Material_Photo_Button_1", "");
+REF_TO_FLAG_STRING.put("Feature/CRM/Condition", "notnull");
+REF_TO_FLAG_STRING.put("Feature/CRM/Principal_Source_of_Impact", "notnull");
+REF_TO_FLAG_STRING.put("Feature/CRM/Other_Sources_of_Impact", "");
+REF_TO_FLAG_STRING.put("Feature/CRM/Archaeological_potential", "notnull");
+REF_TO_FLAG_STRING.put("Feature/CRM/Most_recent_damage_what", "notnull");
+REF_TO_FLAG_STRING.put("Feature/CRM/Most_recent_damage_within", "notnull");
+REF_TO_FLAG_STRING.put("Feature/CRM/RT_Description", "");
+REF_TO_FLAG_STRING.put("Feature/CRM/Comments_and_Recommendations", "");
+REF_TO_FLAG_STRING.put("Feature/CRM/CRM_Photos", "");
+REF_TO_FLAG_STRING.put("Feature/CRM/CRM_Photos_Button_1", "");
+REF_TO_FLAG_STRING.put("Shape/Shape_Note/Label", "id");
+REF_TO_FLAG_STRING.put("Shape/Shape_Note/Note", "");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/GPS_Location_Feature_ID", "readonly id");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/GPS_Location_ID", "autonum notnull id");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Latitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Longitude", "readonly notnull");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Northing", "readonly notnull");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Easting", "readonly notnull");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Accuracy", "readonly notnull");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information/Take_From_GPS_1", "");
+REF_TO_FLAG_STRING.put("User/User", "noscroll");
+REF_TO_FLAG_STRING.put("Start/Main", "");
+REF_TO_FLAG_STRING.put("Start/Search", "nodata noscroll");
+REF_TO_FLAG_STRING.put("Start/Table", "noscroll");
+REF_TO_FLAG_STRING.put("Start/Map", "noscroll");
+REF_TO_FLAG_STRING.put("Feature/General", "");
+REF_TO_FLAG_STRING.put("Feature/Additional_GPS", "");
+REF_TO_FLAG_STRING.put("Feature/Dimensions", "");
+REF_TO_FLAG_STRING.put("Feature/Material", "");
+REF_TO_FLAG_STRING.put("Feature/CRM", "");
+REF_TO_FLAG_STRING.put("Shape/Shape_Note", "");
+REF_TO_FLAG_STRING.put("GPS_Location/GPS_Location_Information", "");
+REF_TO_FLAG_STRING.put("User", "nodata");
+REF_TO_FLAG_STRING.put("Start", "nodata");
+REF_TO_FLAG_STRING.put("Feature", "");
+REF_TO_FLAG_STRING.put("Shape", "");
+REF_TO_FLAG_STRING.put("GPS_Location", "");
 
 String getType(String ref) {
   String type = REF_TO_TYPE.get(ref);
@@ -760,6 +859,10 @@ String getArch16nKey(String ref) {
   else                     return "{" + lastRefPart + "}";
 }
 
+String getArch16nVal(String ref) {
+  return arch16nSubstituteValues(getArch16nKey(ref));
+}
+
 String guessArch16nVal(String ref) {
   return guessArch16nValFromRef(ref);
 }
@@ -789,7 +892,7 @@ String guessArch16nValFromKey(String key) {
  */
 String arch16nSubstituteValues(String unSubbed) {
   if (isInUnitTestTime())
-    return "";
+    return unSubbed;
 
   List entries = new ArrayList();
   entries.add(new NameValuePair(unSubbed, ""));
@@ -2729,15 +2832,23 @@ boolean populateMenu(
   return true;
 }
 
+boolean populateMenu(String ref, List entries, boolean hasNull) {
+  return populateMenu(null, ref, "", entries, hasNull);
+}
+
 boolean populateMenu(String ref, List entries) {
   return populateMenu(null, ref, "", entries, true);
 }
 
-void populateMenu(String ref, String entry) {
+void populateMenu(String ref, String entry, boolean hasNull) {
   List entries  = new ArrayList();
   entries.add(new NameValuePair(entry, ""));
 
-  populateMenu(ref, entries);
+  populateMenu(ref, entries, hasNull);
+}
+
+void populateMenu(String ref, String entry) {
+  populateMenu(ref, entry, false);
 }
 
 /******************************************************************************/
@@ -3083,12 +3194,6 @@ addActionBarItem("external_gps", new ToggleActionButtonCallback() {
       stopGPS();
     }
     startExternalGPS();
-    if(isBluetoothConnected()) {
-      showToast("{External_GPS_Enabled}");
-    } else {
-      showToast("{Please_Enable_Bluetooth}");
-      this.actionOn();
-    }
     updateGPSDiagnostics();
   }
 });
@@ -3240,53 +3345,32 @@ String validateFields(List fields, String format) {
   return out;
 }
 
-void validateStart() {
+List getRefsToValidateByTabGroup(String tabGroup) {
   List f = new ArrayList(); // Fields to be validated
-  f.add(fieldPair("Start/Main/Next_Feature_ID", "{Next_Feature_ID}"));
-  f.add(fieldPair("Start/Main/Next_GPS_Location_ID", "{Next_GPS_Location_ID}"));
+  for (String ref : getRefsMatching(tabGroup + "/*"))
+    if (REF_TO_FLAG_STRING.get(ref).contains("notnull"))
+      f.add(fieldPair(ref, getArch16nKey(ref)));
+  return f;
+}
 
-  String validationMessage = validateFields(f, "PLAINTEXT");
+String getValidationMessage(String tabGroup, String format) {
+  List f = getRefsToValidateByTabGroup(tabGroup);
+  return validateFields(f, format);
+}
+
+void validateTabGroup(String tabGroup) {
+  String validationMessage = getValidationMessage(tabGroup, "PLAINTEXT");
   showWarning("{validation_results}", validationMessage);
+}
+
+void validateStart() {
+  validateTabGroup("Start");
 }
 void validateFeature() {
-  List f = new ArrayList(); // Fields to be validated
-  f.add(fieldPair("Feature/General/Feature_ID", "{Feature_ID}"));
-  f.add(fieldPair("Feature/General/Type", "{Type}"));
-  f.add(fieldPair("Feature/General/Landuse_around_Feature", "{Landuse_around_Feature}"));
-  f.add(fieldPair("Feature/General/Landuse_on_top_of_Feature", "{Landuse_on_top_of_Feature}"));
-  f.add(fieldPair("Feature/General/Feature_prominence", "{Feature_prominence}"));
-  f.add(fieldPair("Feature/General/Latitude", "{Latitude}"));
-  f.add(fieldPair("Feature/General/Longitude", "{Longitude}"));
-  f.add(fieldPair("Feature/General/Northing", "{Northing}"));
-  f.add(fieldPair("Feature/General/Easting", "{Easting}"));
-  f.add(fieldPair("Feature/General/Accuracy", "{Accuracy}"));
-  f.add(fieldPair("Feature/General/Facing_Direction_For_Photo", "{Facing_Direction_For_Photo}"));
-  f.add(fieldPair("Feature/General/Photo", "{Photo}"));
-  f.add(fieldPair("Feature/Dimensions/Height_Max", "{Height_Max__m_}"));
-  f.add(fieldPair("Feature/Dimensions/Width_Max", "{Width_Max__m_}"));
-  f.add(fieldPair("Feature/Dimensions/Length_Max", "{Length_Max__m_}"));
-  f.add(fieldPair("Feature/Dimensions/Diameter_Max", "{Diameter_Max__m_}"));
-  f.add(fieldPair("Feature/Material/Sample_Collected", "{Sample_Collected_}"));
-  f.add(fieldPair("Feature/CRM/Condition", "{Condition}"));
-  f.add(fieldPair("Feature/CRM/Principal_Source_of_Impact", "{Principal_Source_of_Impact}"));
-  f.add(fieldPair("Feature/CRM/Archaeological_potential", "{Archaeological_potential}"));
-  f.add(fieldPair("Feature/CRM/Most_recent_damage_what", "{Most_recent_damage__what_}"));
-  f.add(fieldPair("Feature/CRM/Most_recent_damage_within", "{Most_recent_damage__within_}"));
-
-  String validationMessage = validateFields(f, "PLAINTEXT");
-  showWarning("{validation_results}", validationMessage);
+  validateTabGroup("Feature");
 }
 void validateGPSLocation() {
-  List f = new ArrayList(); // Fields to be validated
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/GPS_Location_ID", "{GPS_Location_ID}"));
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/Latitude", "{Latitude}"));
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/Longitude", "{Longitude}"));
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/Northing", "{Northing}"));
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/Easting", "{Easting}"));
-  f.add(fieldPair("GPS_Location/GPS_Location_Information/Accuracy", "{Accuracy}"));
-
-  String validationMessage = validateFields(f, "PLAINTEXT");
-  showWarning("{validation_results}", validationMessage);
+  validateTabGroup("GPS_Location");
 }
 
 
@@ -3475,6 +3559,11 @@ void onClickStartCreateShape () {
 
 
 void onClickFeatureNewGPSLocation () {
+  triggerAutoSave();
+  if (getUuid("Feature") == null) {
+    showToast("{You_must_save_this_tabgroup_first}");
+    return;
+  }
   newGPSLocation("Feature");
 }
 addOnEvent("User/User/Log_in", "click", "onClickUserLogin()");
@@ -3577,6 +3666,12 @@ void saveEntitiesToRel(String type, String entity1, String entity2, String callb
   saveEntitiesToHierRel(type, entity1, entity2, e1verb, e2verb, callback);
 }
 
+void saveEntitiesToRel(String type, String entity1, String entity2, Callable callback) {
+  String e1verb = null;
+  String e2verb = null;
+  saveEntitiesToHierRel(type, entity1, entity2, e1verb, e2verb, callback);
+}
+
 /** Saves two entity id's as a hierachical relation with some callback executed. **/
 void saveEntitiesToHierRel(String type, String entity1, String entity2, String e1verb, String e2verb, String callback) {
   if (isNull(entity1) || isNull(entity2)) return;
@@ -3585,6 +3680,44 @@ void saveEntitiesToHierRel(String type, String entity1, String entity2, String e
     onSaveAssociation(entity_id, rel_id) {
       if(!isNull(callback)) {
          execute(callback);
+      }
+    }
+    onError(message) {
+      Log.e("saveEntitiesToHierRel", message);
+      showToast(message);
+    }
+  };
+
+  SaveCallback addMoreToRel = new SaveCallback() {
+    onSaveAssociation(entity_id, rel_id) {
+      addReln(entity2, rel_id, e2verb, execCallback);
+    }
+    onError(message) {
+      Log.e("saveEntitiesToHierRel", message);
+      showToast(message);
+    }
+  };
+
+  SaveCallback addToRel = new SaveCallback() {
+    onSave(rel_id, newRecord) {
+      addReln(entity1, rel_id, e1verb, addMoreToRel);
+    }
+    onError(message) {
+      Log.e("saveEntitiesToHierRel", message);
+      showToast(message);
+    }
+  };
+
+  saveRel(null, type, null, null, addToRel);
+}
+
+void saveEntitiesToHierRel(String type, String entity1, String entity2, String e1verb, String e2verb, Callable callback) {
+  if (isNull(entity1) || isNull(entity2)) return;
+
+  SaveCallback execCallback = new SaveCallback() {
+    onSaveAssociation(entity_id, rel_id) {
+      if(callback == null) {
+         callback.call();
       }
     }
     onError(message) {
@@ -4056,8 +4189,8 @@ addOnEvent("Start/Search/Entity_Types"  , "click" , "search()");
 entityTypes = new ArrayList();
 entityTypes.add(new NameValuePair("{All}", ""));
 entityTypes.add(new NameValuePair("{Feature}", "Feature"));
-entityTypes.add(new NameValuePair("{Shape}", "Shape"));
 entityTypes.add(new NameValuePair("{GPS_Location}", "GPS Location"));
+entityTypes.add(new NameValuePair("{Shape}", "Shape"));
 populateDropDown("Start/Search/Entity_Types", entityTypes);
 
 void clearSearch(){

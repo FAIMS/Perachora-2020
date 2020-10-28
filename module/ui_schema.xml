@@ -276,7 +276,7 @@
           <group ref="Col_1" faims_style="large">
             <label/>
             <trigger ref="Search_Button">
-              <label>{Search}</label>
+              <label>{Search_Button}</label>
             </trigger>
           </group>
         </group>
@@ -334,13 +334,13 @@
           <group ref="Col_1" faims_style="even">
             <label/>
             <trigger ref="Center_Me_1">
-              <label>{Center_Me}</label>
+              <label>{Center_Me_1}</label>
             </trigger>
           </group>
           <group ref="Col_2" faims_style="even">
             <label/>
             <trigger ref="Save_Map_Settings_1">
-              <label>{Save_Map_Settings}</label>
+              <label>{Save_Map_Settings_1}</label>
             </trigger>
           </group>
         </group>
@@ -363,7 +363,7 @@
           <label>{Date}</label>
         </input>
         <input faims_attribute_name="Feature author" faims_attribute_type="measure" ref="Feature_author" faims_read_only="true">
-          <label>{Author}</label>
+          <label>{Feature_author}</label>
         </input>
         <select1 faims_attribute_name="Type" faims_attribute_type="vocab" ref="Type" faims_style_class="required">
           <label>{Type}</label>
@@ -447,13 +447,13 @@
           </group>
         </group>
         <trigger ref="Take_From_GPS_1">
-          <label>{Take_From_GPS}</label>
+          <label>{Take_From_GPS_1}</label>
         </trigger>
         <input faims_attribute_name="Handheld GPS point" faims_attribute_type="measure" ref="Handheld_GPS_point">
           <label>{Handheld_GPS_point}</label>
         </input>
         <input faims_attribute_name="Elevation" faims_attribute_type="measure" ref="Elevation">
-          <label>{Elevation__MASL_}</label>
+          <label>{Elevation}</label>
         </input>
         <select1 faims_attribute_name="Facing Direction For Photo" faims_attribute_type="vocab" ref="Facing_Direction_For_Photo" faims_style_class="required">
           <label>{Facing_Direction_For_Photo}</label>
@@ -473,7 +473,7 @@
           </item>
         </select>
         <trigger ref="Photo_Button_1">
-          <label>{Photo}</label>
+          <label>{Photo_Button_1}</label>
         </trigger>
       </group>
       <group ref="Additional_GPS">
@@ -496,36 +496,36 @@
           <group ref="Col_1" faims_style="even">
             <label/>
             <input faims_attribute_name="Height Max" faims_attribute_type="measure" ref="Height_Max" faims_style_class="required">
-              <label>{Height_Max__m_}</label>
+              <label>{Height_Max}</label>
             </input>
             <input faims_attribute_name="Width Max" faims_attribute_type="measure" ref="Width_Max" faims_style_class="required">
-              <label>{Width_Max__m_}</label>
+              <label>{Width_Max}</label>
             </input>
             <input faims_attribute_name="Length Max" faims_attribute_type="measure" ref="Length_Max" faims_style_class="required">
-              <label>{Length_Max__m_}</label>
+              <label>{Length_Max}</label>
             </input>
             <input faims_attribute_name="Diameter Max" faims_attribute_type="measure" ref="Diameter_Max" faims_style_class="required">
-              <label>{Diameter_Max__m_}</label>
+              <label>{Diameter_Max}</label>
             </input>
           </group>
           <group ref="Col_2" faims_style="even">
             <label/>
             <input faims_attribute_name="Height Min" faims_attribute_type="measure" ref="Height_Min">
-              <label>{Height_Min__m_}</label>
+              <label>{Height_Min}</label>
             </input>
             <input faims_attribute_name="Width Min" faims_attribute_type="measure" ref="Width_Min">
-              <label>{Width_Min__m_}</label>
+              <label>{Width_Min}</label>
             </input>
             <input faims_attribute_name="Length Min" faims_attribute_type="measure" ref="Length_Min">
-              <label>{Length_Min__m_}</label>
+              <label>{Length_Min}</label>
             </input>
             <input faims_attribute_name="Diameter Min" faims_attribute_type="measure" ref="Diameter_Min">
-              <label>{Diameter_Min__m_}</label>
+              <label>{Diameter_Min}</label>
             </input>
           </group>
         </group>
         <input faims_attribute_name="Additional Dimension" faims_attribute_type="measure" ref="Additional_Dimension">
-          <label>{Additional_Dimension__m_}</label>
+          <label>{Additional_Dimension}</label>
         </input>
         <input faims_attribute_name="Other Dimension" faims_attribute_type="measure" ref="Other_Dimension">
           <label>{Other_Dimension}</label>
@@ -547,7 +547,7 @@
           <label>{Surface_Material_Description}</label>
         </input>
         <select1 appearance="full" faims_attribute_name="Sample Collected" faims_attribute_type="vocab" ref="Sample_Collected" faims_style_class="required">
-          <label>{Sample_Collected_}</label>
+          <label>{Sample_Collected}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
@@ -564,7 +564,7 @@
           </item>
         </select>
         <trigger ref="Associated_Feature_or_Material_Photo_Button_1">
-          <label>{Associated_Feature_or_Material_Photo}</label>
+          <label>{Associated_Feature_or_Material_Photo_Button_1}</label>
         </trigger>
       </group>
       <group ref="CRM">
@@ -594,14 +594,14 @@
           </item>
         </select1>
         <select1 faims_attribute_name="Most recent damage what" faims_attribute_type="vocab" ref="Most_recent_damage_what" faims_style_class="required">
-          <label>{Most_recent_damage__what_}</label>
+          <label>{Most_recent_damage_what}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
           </item>
         </select1>
         <select1 faims_attribute_name="Most recent damage within" faims_attribute_type="vocab" ref="Most_recent_damage_within" faims_style_class="required">
-          <label>{Most_recent_damage__within_}</label>
+          <label>{Most_recent_damage_within}</label>
           <item>
             <label>Options not loaded</label>
             <value>Options not loaded</value>
@@ -621,7 +621,7 @@
           </item>
         </select>
         <trigger ref="CRM_Photos_Button_1">
-          <label>{CRM_Photos}</label>
+          <label>{CRM_Photos_Button_1}</label>
         </trigger>
       </group>
     </group>
@@ -693,7 +693,7 @@
           </group>
         </group>
         <trigger ref="Take_From_GPS_1">
-          <label>{Take_From_GPS}</label>
+          <label>{Take_From_GPS_1}</label>
         </trigger>
       </group>
     </group>
