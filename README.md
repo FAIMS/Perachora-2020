@@ -2,7 +2,7 @@
 This module was created for the **The Perachora Peninsula Archaeological Project**, based at Macquarie University, Sydney, Australia. The module has been designed to document the current condition and an exact location legacy data and features in the environs of the Perachora Heraion Sanctuary, Greece.
  
 ## Authorship:
-This module was co-developed by Adela Sobotkova and Petra Hermankova, Aarhus University. The current module was built upon the existing [TRAP Burial Mound](https://github.com/FAIMS/burial) module.
+This module was co-developed by Adela Sobotkova and Petra Hermankova, Aarhus University, with contribution from Christian Nassif-Hayes and Ana Stefanovic. The current module was built upon the existing [TRAP Burial Mound](https://github.com/FAIMS/burial) module.
  
 ## Funding:
 N/A
