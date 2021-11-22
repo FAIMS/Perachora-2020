@@ -3,6 +3,9 @@ This module was created for the **The Perachora Peninsula Archaeological Project
  
 ## Authorship:
 This module was co-developed by Adela Sobotkova and Petra Hermankova, Aarhus University, with contribution from Christian Nassif-Haynes and Ana Stefanovic. The current module was built upon the existing [TRAP Burial Mound](https://github.com/FAIMS/burial) module.
+
+## Cite us:
+Nassif-Haynes, Christian, Adela Sobotkova, Petra Heřmánková, and Anna Stevanovic. 2020. Perachora Peninsula Archaeological Project Module (version 531e6a0). Github. https://github.com/FAIMS/Perachora-2020/releases/tag/fieldwork-2020.
  
 ## Funding:
 N/A
